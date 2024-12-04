@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+*{ margin:0; padding:0; list-style: none; text-decoration: none; } 
+
+
+    /*★★★수평네비게이션(header슬라이드-A02,B02, B04)*/
+        #header{ 
+            width:1200px; height:100px;            
+            
+            /*★*/position:absolute; 
+            /*★*/top:0; left:50%; margin-left: -600px;
+            /*★*/overflow: hidden;
+            /*★*/background: pink;  
+        }
+        .header_wrap{ 
+            width:1200px; height:100px;
+            /*★*/background: #fff;    
+        }
+    /*★★★수평네비게이션(header슬라이드-A02,B02, B04)*/
+
+
+
+
+h1{ float:left; line-height:100px; }
+nav{ float:right; width:680px; height:50px; margin:25px 20px 0 0;}
+
+.gnb>li{ width:170px; float:left; text-align: center; }
+.gnb a{ display: block; width:170px; }
+
+.gnb>li>a{ height:50px; line-height:50px;
+           color:#fff; background: red; margin-bottom: 25px;}
+.gnb>li>a:hover{ background: #000; }
+
+.gnb>li>ul{ border:1px solid; }
+.gnb>li>ul a{ 
+    height:40px; line-height: 40px; 
+    border-bottom:1px solid #d9d9d9;
+    background: #fff; color:#000; }
+.gnb>li>ul a:hover{ background: blue; color:#fff; }
+
+
+
+#container{ height:500px; background: yellow; /*★*/margin-top:100px;}
+
+
+
+
+
+
+
+
+
+
+

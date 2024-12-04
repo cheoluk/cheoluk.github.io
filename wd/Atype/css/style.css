@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+*{ margin:0; padding:0; list-style:none; text-decoration:none;  font-family: 돋움, arial; }
+section h2{ display:none; }
+#header, #container, #footer{ width:1200px; margin:0 auto; }
+
+#header{ height:100px; }
+h1{ float:left; margin-top:30px; }
+nav{ float:right; width:680px; height:40px;  margin:30px 30px 0 0; }
+
+.gnb{ position: absolute; width:680px; height: 40px; background: #fff; overflow:hidden; }
+.gnb a{ display:block; width:170px; text-align:center; }
+
+.gnb>li{ float:left; }
+.gnb>li>a{ height:40px; background: #bc1919; color:#fff; line-height:40px; font-size:18px; }
+.gnb>li ul a{ height:30px; line-height:30px; color:#000; }
+.gnb>li>a:hover{ background:#036af5; }
+.gnb>li ul a:hover{  background:#bc1919; color:#fff; }
+
+.content1{ height:300px; overflow:hidden; }
+
+.content2>div{ float:left; width:400px; height:200px; }
+
+.content2 h3 button{  
+	border:0; background: none;  height: 30px; margin:5px 0; 
+	font-size:18px; font-weight:bold;  
+	width:150px; border-bottom:3px solid #bc1919; 
+	text-align:left; cursor:pointer; box-sizing: border-box; }
+
+.content2>div:not(:nth-of-type(1)) h3{ 
+  height: 30px; margin:5px 0; font-size:18px; 
+  width:150px; border-bottom:3px solid #bc1919; box-sizing: border-box;  }
+
+.notice table{ width: 380px; }
+.notice td{ height:30px; border-bottom: 1px dotted #d9d9d9; }
+.notice td a{ color:#333333; }
+
+.layer_popup{  display:none;
+	position: fixed; left:50%; top:50%; width:600px; height:400px; margin: -300px 0 0 -300px; 
+	background: #fff; border:1px solid; }
+.layer_popup h4{ height:50px;  line-height:50px; text-indent:20px; border-bottom:5px solid #bc1919;}
+
+.layer_popup p:nth-of-type(1){ padding: 30px 0 200px 20px; }
+.layer_popup p:nth-of-type(2){ text-align:right; }
+.layer_popup p:nth-of-type(2) button{ 
+	width:80px; height:30px;  margin-right:20px;
+	border:0; background: #bc1919; color:#fff; cursor:pointer; }
+
+.gallery li{ float:left; }
+
+.notice{ position: absolute;  }
+.gallery h3{ margin-left: 170px; position: relative; }
+.gallery ol{ display:none; }
+
+footer{ height:100px;   }
+footer *{ float:left; }
+footer p:nth-of-type(2){ width:800px; line-height: 40px; text-indent:20px; }
+footer li{ margin-left:25px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

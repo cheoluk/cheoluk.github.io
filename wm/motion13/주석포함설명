@@ -1,0 +1,63 @@
+/*
+    3초간격으로 이미지는 좌측으로 -100%만큼 슬라이드 되며,
+    1 2 3 4...1 2 3 4으로 끝없이 롤링배너 형식으로 보여집니다.
+    
+    ex)  setInterval("함수명()",인터벌) 
+         clearInterval(현재 작동중인 셋인터벌 호명(변수명))
+*/
+
+var vg = setInterval("visualGallery()",3000);
+function visualGallery(){    
+    $(".visual ul").stop().animate({ marginLeft:"-100%" },function(){
+        $(".visual ul li:first").appendTo(".visual ul");
+        $(".visual ul").css({ marginLeft: 0 });
+    });
+};
+
+
+$(function(){//1.body내에 모든 태그를 로딩 완료 이후 실행
+
+       //1.(누)재생버튼 (처)비표시 조작.
+       $(".visual_btn button:last").hide();        
+       /*
+            2.
+            (누)비주얼 이미지 다음버튼 $(".visual_btn button:eq(1)")
+            (언)클릭시 .click();
+            (처)
+              1.셋인터벌을 멈춘이후 ( clearInterval(셋인터벌 변수명) )
+              2.재새버튼 표시전환               
+              3.셋인터벌에 설정된 3초가 지난 이후 수행할 명령어를 보관해둔 함수를 당장 찾아와서 사용.
+        */
+       /*다음버튼*/    
+       $(".visual_btn button:eq(1)").click(function(){ 
+            clearInterval(vg);
+            $(".visual_btn button:last").fadeIn("fast");
+            visualGallery();
+       });
+    
+       /*이전버튼*/
+       $(".visual_btn button:eq(0)").click(function(){ 
+            clearInterval(vg);
+            $(".visual_btn button:last").fadeIn("fast");
+            /* 
+                ---
+                 3  4  1  2  
+                ---
+               <   >
+            */
+           $(".visual ul li:last").prependTo(".visual ul"); //조작1
+           $(".visual ul").css({ marginLeft: "-100%" });//조작2
+           $(".visual ul").stop().animate({ marginLeft:0 });//동작
+           
+           
+       });
+    
+       /*재생버튼*/
+       $(".visual_btn button:last").click(function(){           
+            vg = setInterval("visualGallery()",3000);
+            $(this).fadeOut("fast");
+       });
+    
+    
+});//1.body내에 모든 태그를 로딩 완료 이후 실행 
+

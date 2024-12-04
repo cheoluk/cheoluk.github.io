@@ -1,0 +1,167 @@
+/*
+
+    1. fonts.google.com 접속(크롬브라우저)
+
+    2. fonts.google.com에 보여지는 웹폰트의 종류를
+       쇼핑몰에 장바구니 담듯 이용.
+       (우측 상단 view your selectd families 아이콘 클릭)
+
+    3. 본인이 사용하고자 하는 서체 목록 클릭(Select This Style)
+
+    4. Use on the web
+
+       <link>(x)   @import(o)체크
+       
+
+*/
+/*
+    1.Roboto서체 웹폰트 연동 
+      font-family: Roboto;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*
+    1.fonts.google.com에서 지원되지 않는 나눔스퀘어(한글 웹폰트) 연동
+       ※ 눈누 사이트 접속(https://noonnu.cc)
+
+      font-family: NanumSquare;
+*/
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@charset "utf-8";
+*{ 
+    font-family: Roboto,NanumSquare;
+    /*서체의 종류는 그룹화 적용가능(미지원시 다음서체로 적용)*/
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,li{ margin:0; padding:0; }
+li{ list-style: none;}
+button{ border:0; background: none; cursor: pointer; }
+
+h1{ margin: 50px 30px; }
+h2{ margin: 20px 30px; }
+
+
+
+.thumb_gallery{    
+    width:150px; height:150px; overflow: hidden;
+    border:5px solid;
+    margin:30px;
+}
+.thumb_gallery ul{ 
+    width:750px; height:150px; 
+    background: rgba(0,0,0,0.1);   
+}
+.thumb_gallery ul li{ 
+    width:150px; height:150px;
+    border: 3px solid red;
+    box-sizing: border-box;
+    float:left;
+    text-align: center; line-height: 150px;
+    font-size:20px;
+}
+.gallery_btn{ 
+    position: absolute; margin-top: -30px;
+}
+.gallery_btn button{
+    background: blue; color:#fff;
+    padding:5px 10px;
+}
+
+
+
+.swap_gallery{    
+    width:300px; height:450px;
+    border:5px solid;
+    margin:30px;
+}
+.swap_gallery .view{ width:300px; height:300px; margin-bottom:10px;}
+.view img{ width:100%; }
+.text_view{    
+    height:40px; 
+    text-align: center;
+    line-height:30px;
+}
+.swap_gallery_btn li{ width:100px; height:100px; float:left;}
+.swap_gallery_btn li img{ width:100%;}
+/*
+    ※ CSS에서 class선택자의 역할
+
+    1. 유사구조 태그내에 식별자 역할
+      (다른 태그와 차별성 있게 선택할 수 있는 레이블링)
+
+    2. 복수의 대상태그가 동일한 속성을 필요로할때 중첩해서 사용하는 용도
+
+*/
+.thumb_shadow{
+    box-shadow: 0 2px 3px rgba(0,0,0,0.9);
+}
+
+
+/*레이어 팝업*/
+.product_list{ 
+    width:690px; height: 360px; margin:100px auto;
+    border:5px solid;    
+}
+.product_list ul{ 
+    width: 630px; height:360px; margin:0 auto;
+}
+.product_list li{
+    width:300px; height:300px; float:left;
+    text-align: center; color:#fff;
+    margin-top:30px;
+}
+.product_list li:nth-child(1){ background: red; margin-right: 30px; }
+.product_list li:nth-child(2){ background: green; }
+
+
+.product_list li>p{ 
+    height:300px; line-height: 300px;
+    font-size:30px;
+}
+
+.product_list div{
+    width:300px; height:300px; 
+    position: absolute; margin-top: -300px; display: none;
+    background: rgba(0,0,0,0.7);
+}
+
+.product_list div p:first-child{ padding: 100px 0 50px 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

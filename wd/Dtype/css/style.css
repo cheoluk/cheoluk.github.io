@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/*-B1(대한은행)---공통 스타일---------------------------------*/
+    *{ 
+        margin:0; padding:0; 
+        list-style: none; text-decoration: none;
+        border:0; background: none;
+        font-family: 돋움,arial; color:#333333;
+        box-sizing: border-box;
+    }
+    button{ cursor: pointer; }
+
+
+
+/*-B1(대한은행)---100% 확장구역---------------------------------*/
+
+    #header, #footer{ height: 100px; background: #ffffff;}
+    #header{ border-bottom: 1px solid #d9d9d9; }
+    #footer{ border-top: 1px solid #d9d9d9; }
+
+
+/*-B1(대한은행)---1200px 가운데 정렬 구역---------------------------*/
+
+    #container{ height:500px;}
+    .header_wrap,.footer_wrap{ height:100px;}
+    .header_wrap, #container , .footer_wrap{ width:1200px; margin:0 auto;} 
+
+
+
+h1{float:left; margin-top:30px; }
+
+nav{ float:right; width:680px; height:40px; margin:30px 20px;}
+.gnb{ overflow: hidden; position:absolute; width:680px; height:40px; background: #0076be;}
+
+.gnb>li{ float:left; width:170px;  text-align: center; }
+.gnb a{ display:block; color: #fff;}
+
+.gnb>li>a{ height:40px; line-height: 40px; }
+.gnb>li>a:hover{ color:#fff; background:#e66b27; border-bottom:3px solid rgba(255,255,255,0.3); }
+
+.gnb>li ul a{ height: 30px; line-height: 30px; border-bottom:1px solid rgba(255,255,255,0.3); }
+.gnb>li ul a:hover{ background: #fff; color: #0076be; }
+
+
+#container h2{ display: none;}
+.content1{ width:1200px; height:300px; overflow: hidden; }
+.content1 ul{ width:300%; height:300px; }
+.content1 li{ float:left;}
+
+
+.content2{ width:1200px; height:200px; }
+.content2>div{ float:left; width:400px; height:200px; }
+
+.content2 h3 button, .content2>div:not(:first-child)>h3{ 
+    width:120px; height:40px; margin:5px 0; text-align: center; font-weight: normal;
+    font-size:18px; font-weight: bold; line-height: 40px;
+    color:#0076be;
+    border-bottom:3px solid #e88b27;
+}
+
+
+.content2 h3 button:hover{ background: #e66b27; color:#fff; }
+
+
+.notice table{ width:380px; }
+.notice td{ height:32px; border-bottom: 1px dotted #d9d9d9; }
+.notice td a{ display: block; height: 32px; line-height: 32px; text-indent: 10px; }
+.notice td a:hover{ background: rgba(0,0,0,0.2); }
+
+
+
+.layer_popup{ 
+    display: none;
+    position: fixed; left:50%; top:50%;  
+    width:600px; height:400px; margin: -200px 0 0 -300px;
+    border-radius: 30px;
+    background: #0076be; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+.layer_popup h4{ 
+    height:50px; line-height:50px; text-indent: 20px;
+    border-bottom: 1px dotted rgba(255,255,255,0.5); 
+    color:#fff; font-size: 20px; }
+
+.layer_popup p:nth-of-type(1){ padding:20px 0 230px 20px; color:#fff; }
+.layer_popup p:nth-of-type(2){ text-align: right;}
+.layer_popup button{ 
+    width:60px; height:60px; border-radius: 30px; margin-right:20px;
+    color:#fff; background: #e66b27; font-size: 16px;}
+
+.notice{ position: absolute; } 
+.gallery ol{ display: none; }
+.gallery h3{ position: relative; margin-left: 140px; }
+.gallery li{ float:left; width:130px; height: 130px; overflow: hidden; }
+.gallery li:nth-child(2){ margin:0 5px;}
+
+
+.footer_wrap>*{ float:left; padding-top:30px; }
+
+.footer_wrap li{ float:left; margin:0 20px 10px 0; }
+.footer_wrap li:not(:last-child){ border-right:1px solid #999;  padding-right:20px;}
+.footer_wrap li a:hover{ opacity: 0.3; }
+
+
+

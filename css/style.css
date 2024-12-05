@@ -927,7 +927,8 @@ h1{ padding-top:10px; }
         margin:10px; border-radius:23px;
     }
     
-    .job_info li:nth-child(4){ margin-left:210px;  }
+    .job_info li:nth-child(1){ margin-left:210px;  }
+    .job_info li:nth-child(3){ margin-left:210px;  }
     .job_info li p:first-child{ height:60px; line-height:60px; font-size:20px; }
     .job_info li p:last-child{ padding:0 0 15px; font-size:17px; }
 
@@ -936,7 +937,6 @@ h1{ padding-top:10px; }
     .job_info li:nth-child(2) p b{  color:#ff9a00; }
     .job_info li:nth-child(3) p b{  color:#FF5733; }
     .job_info li:nth-child(4) p b{  color:#F0DB4F; }
-    .job_info li:nth-child(5) p b{  color:#2565AE; }
 
 
     /* 7. port  -------------------------------------*/

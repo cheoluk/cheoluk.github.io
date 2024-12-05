@@ -1,8 +1,10 @@
+@charset "utf-8"
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 
-@charset "utf-8";
+
 
 body{ font-family:Josefin Sans,Noto Sans KR,Roboto,NanumSquare; }
 body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,table,tr,th,td{ margin:0; padding:0; }
@@ -912,11 +914,10 @@ h1{ padding-top:10px; }
         overflow:hidden;
         font-weight: bold; 
     }
-    .job_chart li:nth-child(1) p{ width:80%; background:#30a8ff; }
-    .job_chart li:nth-child(2) p{ width:90%; background:#ff9a00; }
-    .job_chart li:nth-child(3) p{ width:95%; background:#FF5733; }
-    .job_chart li:nth-child(4) p{ width:85%; background:#F0DB4F; }
-    .job_chart li:nth-child(5) p{ width:80%; background:#2565AE; }
+    .job_chart li:nth-child(1) p{ width:95%; background:#30a8ff; }
+    .job_chart li:nth-child(2) p{ width:95%; background:#ff9a00; }
+    .job_chart li:nth-child(3) p{ width:90%; background:#FF5733; }
+    .job_chart li:nth-child(4) p{ width:90%; background:#F0DB4F; }
     
     .job_info li{
         width:380px; height:180px;

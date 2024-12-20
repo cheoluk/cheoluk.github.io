@@ -6,6 +6,7 @@
     <title>개인포트폴리오</title>
     <meta name="description" content="프론트엔드 개발자 이철욱 포트폴리오 입니다.">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/motion.js"></script>
 </head>
@@ -13,21 +14,28 @@
     <!-- 상단 고정형(position:fixed)-->
     <header id="header">
         <div class="header_wrap"> 
-            <h1><a href="index.html"><img src="images/logo.png" alt="로고"></a></h1>
+            <h1><a href="index.html">CHEOLUK<!-- <img src="images/logo.png" alt="로고"> --></a></h1>
             <p class="nav_btn"><button><img src="images/nav_btn.png" alt="메뉴버튼"></button></p>
             <nav>
                 <p class="nav_close_btn"><button><img src="images/nav_close_btn.png" alt="닫기버튼"></button></p>
-                <ul class="gnb"> 
-                    <li><button>INTRO</button></li> 
-                    <li><button>PROFILE</button></li> 
-                    <li><button>EDUCATION</button></li> 
-                    <li><button>SKILLS</button></li> 
-                    <li><button>PORTFOLIO</button></li> 
-                    <li><button>CONTACT</button></li>
+                <ul class="gnb">
+                    <li>
+                        <button>INTRO</button>
+                    </li> 
+                    <li>
+                        <button>PROFILE</button>
+                    </li> 
+                    <li>
+                        <button>SKILLS</button>
+                    </li> 
+                    <li>
+                        <button>PORTFOLIO</button>
+                    </li> 
+                    <li>
+                        <button>CONTACT</button>
+                    </li>
                 </ul>
-                
             </nav>
-            
         </div>
     </header>
     
@@ -36,8 +44,11 @@
         
         <section class="intro">
             <div class="intro_wrap">
-                <h2>소개</h2> 
-                <ul>
+                <h2>main visual</h2>
+
+                <p class="typing-txt">웹 퍼블리셔, 이 철 욱 입니다.</p>
+                <p class="typing"></p>
+                <!-- <ul>
                     <li class="v1">
                         <div>
                             <p><b>강<span style="font-size:55px">철</span>같은 끈기를 갖춘<br> 퍼블리셔</b></p>
@@ -77,7 +88,7 @@
                     <button><img src="images/intro_btn.png" alt="인트로버튼"></button>
                     <button><img src="images/intro_btn.png" alt="인트로버튼"></button>
                     <button><img src="images/intro_btn_play.png" alt="인트로재생버튼"></button>
-                </div>
+                </div> -->
                 
             </div>
         </section>
@@ -91,9 +102,7 @@
                             <img src="images/profile.jpg" alt="프로필사진">
                         </li>
                     </ul>
-                    <p></p>
-                    <p class="typing-txt">함께하고 싶은 신입 웹 퍼블리셔, 이 철 욱 입니다.</p>
-                    <p class="typing"></p>
+                    
                     
                     <p>이 철 욱<br> 
                         1996.11.19<br>
@@ -105,6 +114,8 @@
                         2021.12 반응형 웹퍼블리싱 UI/UX 수료<br>
                         2021.11	그래픽기술자격 일러스트(GTQi) 취득<br>
                         2021.03	안산대학교(경기) 디지털정보통신학과 졸업<br>
+                        2022.08 골드커머스 입사<br>
+                        2024.05 골드커머스 퇴사<br>
                     </p>
                 </div>
                 
@@ -113,7 +124,7 @@
             </div>
         </section>
         
-        <section class="edu">
+        <!-- <section class="edu">
             <div class="edu_wrap">
                 <h2>EDUCATION</h2> 
                 <table>
@@ -170,7 +181,7 @@
                 </table>
                 
             </div>
-        </section>
+        </section> -->
         
         <section class="job">
             <div class="job_wrap">
@@ -195,7 +206,8 @@
                 <div class="job_info">
                     <ul>
                         <li>
-                            <p><b>HTML</b></p>
+                            <img src="images/html5.png" alt="HTML5 이모티콘">
+                            <p>HTML</p>
                             <p>
                                 사이트에 제공되는 정보의 의미에 맞게<br>
                                 웹표준, 웹접근성을 준수하며 하드코딩<br>
@@ -203,7 +215,8 @@
                             </p>
                         </li>    
                         <li>
-                            <p><b>CSS</b></p>
+                            <img src="images/css3.png" alt="CSS3 이모티콘">
+                            <p>CSS</p>
                             <p>
                                 표준화된 HTML문서에 프로토타입<br>
                                 결과물의 디자인 규칙을 반영하여<br>
@@ -211,18 +224,21 @@
                             </p>
                         </li>    
                         <li>
-                            <p><b>JAVASCRIPT</b></p>
+                            <img src="images/js.png" alt="JAVASCRIPT 이모티콘">
+                            <p>JAVASCRIPT</p>
                             <p>
                                 사이트에 필요로하는 조작과 동작의<br>
                                 원리를 기반으로 문법에 대입하여<br>
                                 필요한 모션을 구현 
                             </p>
-                        </li><li>
-                            <p><b>VUE.JS</b></p>
+                        </li>
+                        <li>
+                            <img src="images/vuejs.png" alt="VUEJS 이모티콘">
+                            <p>VUE.JS</p>
                             <p>
-                                <br>
-                                <br>
-                                
+                                컴포넌트 기반 구조를 통해 효율적으로 유지보수
+                                가능한 UI를 설계, 반응형 데이터 바인딩과 이벤트
+                                핸들링으로 동적인 사용자 경험을 제공
                             </p>
                         </li>
                     </ul>
@@ -235,67 +251,76 @@
             <div class="port_wrap">
                 <h2>PORTFOLIO</h2> 
                 <div class="port_btn">
-                    <button>제작</button>
-                    <button>구현</button>
-                    <button>모션</button>
+                    <button>오리온</button>
+                    <button>LG U+</button>
+                    <button>Todo List</button>
                 </div>
                 
                 <ul> 
                     <li>
-                        <h3>웹 사이트 제작</h3>
-                        <p><img src="images/port.png" alt="오리온 가상리뉴얼 사이트"></p>
-                        <table>
-                            <thead>
-                                <tr><th>프로젝트</th> <th>제작기간</th> <th>프로그램</th> <th>출력형태</th> </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>오리온 홈페이지 리뉴얼</td> <td>4주</td> <td id="data_list">HTML,CSS,JS,PHOTOSHOP,ILLUSTRATOR</td> <td>DESKTOP</td> </tr>
-                                <tr>
-                                    <td colspan="4">
-                                        <p>
-                                            기존 제과 기업의 이미지 -> <br>글로벌한 기업의 이미지로 홈페이지 리뉴얼
-                                        </p>
-                                        <p><a href="manual/index.html" target="_blank">사이트 설명서</a></p>
-                                        <p><a href="orion/index.html" target="_blank">사이트 LINK</a></p>
-                                    </td>  
-                                </tr>
-                            </tbody>
-                        </table>
+                        <h3>오리온 가상리뉴얼 홈페이지</h3>
+                        <div class="port_table_wrap">
+                            <p><img src="images/port.png" alt="오리온 가상리뉴얼 사이트"></p>
+                            
+                            <table>
+                                <thead>
+                                    <tr><th>프로젝트</th> <th>제작기간</th> <th>프로그램</th> <th>출력형태</th> </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>오리온 홈페이지 리뉴얼</td> <td>4주</td> <td id="data_list">HTML,CSS,JS,PHOTOSHOP,ILLUSTRATOR</td> <td>DESKTOP</td> </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <p>
+                                                기존 제과 기업의 이미지 -> <br>글로벌한 기업의 이미지로 홈페이지 리뉴얼
+                                            </p>
+                                            <p><a href="manual/index.html" target="_blank">사이트 설명서</a></p>
+                                            <p><a href="orion/index.html" target="_blank">사이트 LINK</a></p>
+                                        </td>  
+                                    </tr>
+                                </tbody>
+                            </table>
                         
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>프로젝트</th>
-                                    <td>오리온 홈페이지 리뉴얼</td>
-                                </tr>
-                                <tr>
-                                    <th>제작기간</th>
-                                    <td>4주</td>
-                                </tr>
-                                <tr>
-                                    <th>프로그램</th>
-                                    <td>HTML, CSS, JS, PHOTOSHOP, ILLUSTRATOR</td>
-                                </tr>
-                                <tr>
-                                    <th>출력형태</th>
-                                    <td>DESKTOP</td>
-                                </tr>  
-                                <tr>
-                                    <td colspan="4">
-                                        <p> 
-                                            기존 제과 기업의 이미지 -> 글로벌한 기업의 이미지로 홈페이지 리뉴얼
-                                        </p>
-                                        <p><a href="manual/index.html" target="_blank">사이트 설명서</a></p>
-                                        <p><a href="orion/index.html" target="_blank">사이트 LINK</a></p>
-                                    </td>  
-                                </tr>
-                            </tbody>
-                        </table>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>프로젝트</th>
+                                        <td>오리온 홈페이지 리뉴얼</td>
+                                    </tr>
+                                    <tr>
+                                        <th>제작기간</th>
+                                        <td>4주</td>
+                                    </tr>
+                                    <tr>
+                                        <th>프로그램</th>
+                                        <td class="port_lang">
+                                            <span>HTML</span>
+                                            <span>CSS</span>
+                                            <span>JS</span>
+                                            <span>PHOTOSHOP</span>
+                                            <span>ILLUSTRATOR</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>출력형태</th>
+                                        <td>DESKTOP (PC)</td>
+                                    </tr>  
+                                    <tr>
+                                        <td colspan="4">
+                                            <p> 
+                                                기존 제과 기업의 이미지 -> 글로벌한 기업의 이미지로 홈페이지 리뉴얼
+                                            </p>
+                                            <p><a href="manual/index.html" target="_blank">사이트 설명서</a></p>
+                                            <p><a href="orion/index.html" target="_blank">사이트 LINK</a></p>
+                                        </td>  
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </li>
                     
                     <li>
-                        <h3>웹디자인기능사 유형별 구현</h3>
-                        <ul>
+                        <h3>LG 유플러스</h3>
+                        <!-- <ul>
                             <li class="check_li_img3">
                                 <a href="wd/Atype/index.html" target="_blank"><img src="images/Atype.jpg" alt="A유형"></a><br>A유형
                             </li>
@@ -316,12 +341,12 @@
                             </li>
                         </ul>
                         <button class="wd_more_btn1">1</button>
-                        <button class="wd_more_btn2">2</button>
+                        <button class="wd_more_btn2">2</button> -->
                     </li>
                     
                     <li>
-                        <h3>웹사이트 기본 모션</h3>
-                        <ul>
+                        <h3>Todo List Vue.js</h3>
+                        <!-- <ul>
                             <li class="check_li_img1 ">
                                 <a href="wm/motion1/index.html" target="_blank">
                                     <img src="images/motion1.jpg" alt="조작(스왑이미지,레이어팝업)">
@@ -405,7 +430,7 @@
                         </ul>
                         
                         <button class="more_btn1 ">1</button>
-                        <button class="more_btn2 ">2</button>
+                        <button class="more_btn2 ">2</button> -->
                     </li>
                     
                 </ul>
@@ -414,9 +439,31 @@
         
         <section class="contact">
             <div class="contact_wrap">
-                <h2>CONTACT</h2>
+                <h2>
+                    CONTACT
+                    <p>언제든지 연락주세요<br></p>
+                </h2>
                 
-                <div class="email">
+                <ul class="contact_info">
+                    <li class="address">
+                        ADDRESS
+                        <p>경기도 안양시 만안구</p>
+                    </li>
+                    <li class="cellphone">
+                        CELL PHONE
+                        <p>010-5701-1119</p>
+                    </li>
+                    <li class="email">
+                        E-MAIL
+                        <p>cheoluk96@hanmail.net</p>
+                    </li>
+                    <li class="website">
+                        WEB SITE
+                        <p>cheoluk.github.io</p>
+                    </li>
+                </ul>
+
+           <!-- <div class="email">
                     <p id="email_text">궁금한점이 있으시면 언제든지 연락주세요!</p>
                     <div class="title">
                         <h3>제목</h3>
@@ -432,7 +479,7 @@
                     </div>
                     <button id="submitBtn" type="button">보내기</button>
                     <a id="submitAlink" href="" style="display:none;"></a> 
-                </div>
+                </div> -->
             </div>
         </section>
         
@@ -441,7 +488,7 @@
     <footer id="footer">
         <div class="footer_wrap">
             <p><button><img src="images/footer_btn.png" alt="페이지상단이동"></button></p>
-            <p>(C) cheoluk.com ALL RIGHTS RESERVED.</p><br>
+            <p>(C) copyright Lee Cheoluk. All Right Reserved.</p><br>
         </div>    
     </footer> 
 </body>  

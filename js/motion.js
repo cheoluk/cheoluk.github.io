@@ -5,11 +5,11 @@
 
 var count = 0;
 var ag    = setInterval("autoGallery()",6000);
-function autoGallery(){ 
-    var iN = $(".intro li:last").index(); 
-    count += 1; 
+function autoGallery(){
+    var iN = $(".intro li:last").index();
+    count += 1;
     if( count <= iN ){
-        $(".intro ul").stop().animate({marginLeft:-100 * count+"%"}); 
+        $(".intro ul").stop().animate({marginLeft:-100 * count+"%"});
         $(".intro_btn button:not(:last)").css({background:"url(images/intro_btn.png)no-repeat center top"});
         $(".intro_btn button:eq("+count+")").css({background:"url(images/intro_btn_now.png)no-repeat center top"});
     }else{
@@ -18,14 +18,14 @@ function autoGallery(){
         $(".intro ul").stop().animate({marginLeft:-100*iN+"%"},function(){
             $(".intro li:last").prependTo(".intro ul");
             $(".intro ul").css({marginLeft:0});
-            count=0; 
+            count=0;
             $(".intro_btn button:not(:last)").css({background:"url(images/intro_btn.png)no-repeat center top"});
             $(".intro_btn button:eq("+count+")").css({background:"url(images/intro_btn_now.png)no-repeat center top"});
         });
-    } 
+    }
 }
 
-function eduMotion(){
+/* function eduMotion(){
     $(".edu_wrap table tr:eq(0)").fadeIn(300,function(){
         $(".edu_wrap table tr:eq(1)").fadeIn(300,function(){
             $(".edu_wrap table tr:eq(2)").fadeIn(300,function(){
@@ -39,14 +39,13 @@ function eduMotion(){
             });            
         });
     });    
-}
+} */
 
 function jobMotion(){
-        $(".job_chart li:eq(0) p").animate({width:"80%"},800);
-        $(".job_chart li:eq(1) p").animate({width:"90%"},600);
-        $(".job_chart li:eq(2) p").animate({width:"95%"},1200);
-        $(".job_chart li:eq(3) p").animate({width:"85%"},1000);
-        $(".job_chart li:eq(4) p").animate({width:"80%"},700);
+        $(".job_chart li:eq(0) p").animate({width:"90%"},800);
+        $(".job_chart li:eq(1) p").animate({width:"95%"},600);
+        $(".job_chart li:eq(2) p").animate({width:"85%"},1200);
+        $(".job_chart li:eq(3) p").animate({width:"80%"},1000);
 }
 
 function AddTyping(){
@@ -78,15 +77,15 @@ $(document).ready(function(){
           $(".footer_wrap p:eq(0)").fadeOut("slow");
       }
 
-      if(sn > 1100){
+      /* if(sn > 1100){
         eduMotion();
-      }
+      } */
       
-      if(sn > 2100){
+      if(sn > 1100){
           jobMotion();
       }
        
-      if(sn > 375 && check == 0){
+      if(sn > 0 && check == 0){
         check = 1;
         AddTyping();
       }
@@ -192,17 +191,17 @@ $(document).ready(function(){
     });
     
     // edu 
-    $(".edu_wrap table tr").css({ display:"none" });
+    /* $(".edu_wrap table tr").css({ display:"none" }); */
     
     // work  
     $(".job_chart li p").css({ width:0 });
       
     //6. portfolio 
-    $(".port_btn button:eq(0)").css({background:"#04111a", color:"#fff"}); 
+    $(".port_btn button:eq(0)").css({background: "rgba(48, 168, 255, 0.1)", color:"#000"}); 
     $(".port_wrap>ul>li:not(:first)").hide();    
     $(".port_btn button").click(function(){ 
-      $(".port_btn button").css({background:"none",color:"#fff"});
-      $(this).css({background:"#04111a", color:"#fff"}); 
+      $(".port_btn button").css({background:"none",color:"#000"});
+      $(this).css({background:"rgba(48, 168, 255, 0.1)", color:"#000"}); 
       $(".port_wrap>ul>li").hide();
       $(".port_wrap>ul>li:eq("+$(this).index()+")").show();
     });

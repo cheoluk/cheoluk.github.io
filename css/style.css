@@ -18,25 +18,27 @@
     font-style: normal;
 }
 
-body{ font-family:Josefin Sans,Noto Sans KR,Roboto,/* nanumsquare */ /* Gmarket Sans */ GangwonEdu_OTFBoldA ; }
+body{
+    font-family:Josefin Sans,Noto Sans KR,Roboto,/* nanumsquare */ /* Gmarket Sans */ GangwonEdu_OTFBoldA ;
+    background-image: url(../images/visual1.jpg);
+    background-size: cover;
+    background-position: center;
+
+    /* background-repeat: no-repeat;
+    
+    background-attachment: fixed; */
+}
 body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,table,tr,th,td{ margin:0; padding:0; }
 li{ list-style:none; }
 a{ text-decoration:none; }
 button{ border:0; background:none; cursor:pointer; } 
-section{float:left; clear:both; width:100%; } 
-/* .intro{ background: url(../images/intro_bg.jpg) no-repeat center top/cover fixed;} 
-.job{ background: url(../images/job_bg.jpg) no-repeat center top/cover fixed; }
+section{ clear:both; width:100%; } 
+/* .job{ background: url(../images/job_bg.jpg) no-repeat center top/cover fixed; }
 .port{ background: url(../images/port_bg.jpg) no-repeat center top/cover fixed; }
 .contact{ background: url(../images/contact_bg.jpg) no-repeat center top/cover fixed; }   */
-.profile{ background:#fff; }  
-.edu{ background:#fff; }   
-.job{ background:#fff; }
-.port{ background:#fff; }
-.contact{ background:#fff; }  
-#header{ background:#fff; }
-.footer_wrap{ background:#fff; color:#000; font-size: 15px; }
  
 /* 모바일환경(css)-스크린폭: 최대 500px 이하 */ 
+
 @media screen and (max-width:500px){
     
         section h2{ display: none;}
@@ -771,179 +773,207 @@ section{float:left; clear:both; width:100%; }
 @media screen and (min-width:1200px){
     /* 1. header  -------------------------------------*/
     #header{ 
-        position:fixed; left:0; top:0; z-index:1;
-        width:100%; height:80px;
-        background:rgba(48, 168, 255, 0.1);
+        position:fixed;
+        left:0;
+        top:0;
+        z-index:1;
+        width:100%;
+        height:80px;
         
     }
-    .header_wrap{ width:1200px; height:80px; margin:0 auto; }
+    .header_wrap{
+        width:1200px;
+        height:80px;
+        margin:0 auto;
+    }
     h1{
         font-family: yg-jalnan;
         /* font-weight: 700; */
-        font-size:25px; line-height: 80px; 
-        padding-left: 30px; float:left;
+        font-size:25px;
+        line-height: 80px; 
+        padding-left: 30px;
+        float:left;
     }
     h1 a{
         color: #000;
     }
-    .nav_btn, .nav_close_btn{ display:none; }
-    nav{ float:right; margin-right:30px; }
+    .nav_btn, .nav_close_btn{
+        display:none;
+    }
+    nav{
+        float:right;
+        margin-right:30px;
+    }
 
-    .gnb li{ width:130px; height:80px; float:left; }
+    .gnb li{
+        width:130px;
+        height:80px;
+        float:left;
+    }
 
     .gnb button{
         display:block;
-        width:100%; height:80px;
-        font-size:25px; font-weight:bold;
+        width:100%;
+        height:80px;
+        font-size:25px;
+        font-weight:bold;
         color:#000;
         font-family: GangwonEdu_OTFBoldA;
     }
-    .gnb button:hover{ border-bottom:3px solid #000; box-sizing:border-box; }
+    .gnb button:hover{
+        border-bottom:3px solid #000;
+        box-sizing:border-box;
+    }
     
     
-    #container{ margin-top:80px; }
-    
+    #container{
+        margin-top:80px;
+    }
+        
     /* 2. intro  -------------------------------------*/
     .intro{
       width:100%;
-      height:100%; overflow:hidden; 
+      height:100%;
+      overflow:hidden; 
       /* background: url(../images/intro_bg.jpg) no-repeat center top/cover fixed; */
     
-    }
-
-    .typing-txt {
-        display: none;
-        font-size: 20px;
-    }
-
-    .typing {
-        /*position: absolute;*/
-        display: inline-block;
-        animation-name: cursor;
-        animation-duration: 0.7s;
-        animation-iteration-count: infinite;
     }
     .intro_wrap{
         width:1200px;
         height: 830px;
         padding: 300px 200px 0;
     }
-    .intro_wrap h2{ display:none; }
-    /* .intro_wrap ul{
-        width:300%;
-        height:500px; margin-top:30px;
+    .intro_wrap h2{
+        display:none;
     }
-    .intro_wrap li{
-        width:33.333%;
-        height:500px;
-        float:left;
-        text-align:left; 
+    .typing-txt {
+        display: none;
     }
-    .intro_wrap li div{
-        width:1200px; margin:0 auto;
-        padding:200px 20px 0;
+
+    .typing {
+        /*position: absolute;*/
+        display: inline-block;
+        animation-name: cursor;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        font-size: 35px;
     }
-    .intro_wrap li div p{ margin-left:15px; }
-    .intro_wrap li p:first-child{
-        font-size:42px; font-weight:bold; color:#fff;
-        letter-spacing:-2px;
-        padding: 30px 0 40px 0;
-    }
-    .intro_wrap li p:nth-child(2){
-        margin-bottom:20px; color:#fff;
-        font-size:24px; font-weight:bold;
-    }
-    .intro_wrap li p:last-child{
-        font-size:17px;
-        color:#fff;
-    }
-    .intro_wrap li br{ display:none; }
-    
-    .intro_btn{
-        width:180px; height:30px;
-        position:absolute;
-        left:50%; margin-top:150px;
-    } */
 
     /* 3. concept  -------------------------------------*/
     #container section:not(:first-child){
-        height:1000px; text-align:center;
+        height:1000px;
+        text-align:center;
     }
     #container section h2{
-        height:80px; line-height:80px;
+        height:80px;
+        line-height:80px;
         font-size:35px;
         font-weight: bold;
         margin-bottom: 25px;
     }
     
     /* 4. profile  -------------------------------------*/
-    .profile_wrap{ width:1200px; margin:0 auto; }
-    .profile_wrap h2{ color:#000; margin-top:30px; }
-    .profile_wrap div{
-        height:850px; text-align:left; margin:0 25px 30px;
-        width:92%; margin:0 4% 50px 4%; font-size:20px;
-        padding:0 5px; color:#000;
+    .profile_wrap{
+        width:1200px;
+        margin:0 auto;
     }
-    .profile_wrap div img{ float:left; margin-right:100px; width:250px; }
-    .profile_wrap div p{ margin-bottom:30px; line-height: 27px; }
-    .profile_wrap div p:first-child{ 
-        font-size: 30px; font-weight:bold; 
-        line-height: 40px;
+    .profile_wrap h2{
+        color:#000;
+        margin:30px 0 15px 0;
     }
-    .profile_wrap div p:last-child{
-        margin-left: 302px;
+    .profile_wrap h3{
+        font-size: 27px;
+        margin: 30px 0 25px 25px;
     }
-    .profile_wrap div ul{
-        margin-top: 30px;
+    .profile_wrap>div{
+        width:1200px;
+        text-align:left;
+        font-size:20px;
     }
-    .profile_wrap div li{
-        width:250px; height:332px;
-        border-radius:23px;
-        overflow:hidden;
-        float:left; margin-right:50px;
+    .profile_img{
+        width: 325px;
+        height: 440px;
+        float: left;
     }
-    
-    
-    
-    
-    /* 5. edu  -------------------------------------*/
-    /* .edu{
-        height:1000px; color:#000;
-        background: url(../images/profile_bg.jpg) no-repeat center top/cover fixed;
-    } */
-    /* .edu_wrap{ width:1200px; margin:0 auto; }
-    .edu_wrap h2{ margin:20px 0; }
-    .edu_wrap table{
-        border-collapse:collapse;
-        width:90%; margin:0 5%;
+    .profile_img img{
+        width: 325px;
     }
-    .edu_wrap tr>*{
-        height:50px;  border-bottom:1px solid;
+    .profile_img li{
+        width: 320px;
+        height: 385px;
+        border-radius: 23px;
+        overflow: hidden;
     }
-    .edu_wrap th{
-        width:250px; height:40px;
-        line-height:40px; font-size:18px;
-        background:rgba(174,182,185,0.9); color:#000;
-        border-top-left-radius:23px;
-         
-            
-    } 
+    .profile_info{
+        width: 330px;
+        height: 600px;
+        margin-left: 100px;
+        float: left;
+        padding-left: 20px;
+    }
+    .profile_info dl{
+        width: 330px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .profile_info dt{
+        width: 130px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .profile_info dd{
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .profile_career{
+        width: 700px;
+        height: 600px;
+        float: left;
+        padding-left: 45px;
+    }
+    .profile_career dl {
+        width: 660px;
+        display: flex;
+        flex-flow: row wrap;
+        border-top: 1px solid #d9d9d9;
+        padding-top: 25px;
+    }
+    .profile_career dt {
+        width: 255px;
+        height: 55px;
+        line-height: 55px;
+        text-indent: 15px;
+    }
+    .profile_career dd {
+        width: 400px;
+        height: 55px;
+        line-height: 55px;
+    }
 
-    .edu_wrap td{ padding:25px; text-align:left; font-size:17px; }
-    .edu_wrap td br{ display:none; } */
-
     
-    /* 6. job  -------------------------------------*/
-    .job{ height:1000px; color:#000; }
-    .job_wrap{ width:1200px; margin:0 auto; }
+    /* 5. job  -------------------------------------*/
+    .job{
+        height:1000px;
+        color:#000;
+    }
+    .job_wrap{
+        width:1200px;
+        margin:0 auto;
+    }
     .job_wrap h2{
         margin:20px 0;
     }
-    .job_chart{ width:90%; margin:0 5% 50px 5%; }
+    .job_chart{
+        width:90%;
+        margin:0 5% 50px 5%;
+    }
     .job_chart li{
-        width:100%; height:40px;
+        width:100%;
+        height:40px;
         /* border:1px solid #d9d9d9; */
-        margin:10px 0; line-height:40px;
+        margin:10px 0;
+        line-height:40px;
         color:#fff;
     }
     .job_chart li p{
@@ -954,36 +984,56 @@ section{float:left; clear:both; width:100%; }
         border-radius: 7px;
         opacity: 0.87;
     }
-    .job_chart li:nth-child(1) p{ width:90%; background:#ff782f; }
-    .job_chart li:nth-child(2) p{ width:95%; background:#0760ff; }
-    .job_chart li:nth-child(3) p{ width:85%; background:#ffce52; }
-    .job_chart li:nth-child(4) p{ width:80%; background:#59b254; }
+    .job_chart li:nth-child(1) p{
+        width:90%;
+        background:#ff782f;
+    }
+    .job_chart li:nth-child(2) p{
+        width:95%;
+        background:#0760ff;
+    }
+    .job_chart li:nth-child(3) p{
+        width:85%;
+        background:#ffce52;
+    }
+    .job_chart li:nth-child(4) p{
+        width:80%;
+        background:#59b254;
+    }
     
 
     .job_info li{
-        width:380px; height:180px;
-        float:left; padding-top:25px; 
-        /* background:rgba(174,182,185,0.9); */
-        /* background:rgb(48, 168, 255,0.1); */
-        background: #DCE2F0;
-        margin:10px; border-radius:23px;
+        width:380px;
+        height:180px;
+        float:left;
+        padding-top:25px; 
+        background:rgb(48, 168, 255,0.1);
+        /* background: #DCE2F0; */
+        margin:10px;
+        border-radius:23px;
     }
     
-    .job_info li:nth-child(1){ margin-left:210px;  }
-    .job_info li:nth-child(3){ margin-left:210px;  }
+    .job_info li:nth-child(1){
+        margin-left:210px;
+    }
+    .job_info li:nth-child(3){
+        margin-left:210px;
+    }
     
     .job_info li p{
         text-align: left;
     }
     .job_info li p:nth-child(2){
-        height:60px; line-height:70px;
+        height:60px;
+        line-height:70px;
         font-size:20px;
         font-weight: bold;
         text-indent: 10px;
         margin-bottom: 10px;
     }
     .job_info li p:nth-child(3){
-        margin:5px 35px 15px; font-size:17px;
+        margin:5px 35px 15px;
+        font-size:17px;
     }
 
     .job_info li img{
@@ -991,38 +1041,58 @@ section{float:left; clear:both; width:100%; }
         margin-left:25px;
     }
     
-    .job_info li:nth-child(1) p:nth-child(2){ color:#ff782f; }
-    .job_info li:nth-child(2) p:nth-child(2){ color:#0760ff; }
-    .job_info li:nth-child(3) p:nth-child(2){ color:#ffce52; }
+    .job_info li:nth-child(1) p:nth-child(2){
+        color:#ff782f;
+    }
+    .job_info li:nth-child(2) p:nth-child(2){
+        color:#0760ff;
+    }
+    .job_info li:nth-child(3) p:nth-child(2){
+        color:#ffce52;
+    }
     .job_info li:nth-child(4) img{
         width:13%;
         height:28%;
         margin:5px 0 0 35px;
     }
-    .job_info li:nth-child(4) p:nth-child(2){ color:#59b254; }
+    .job_info li:nth-child(4) p:nth-child(2){
+        color:#59b254;
+    }
 
 
-    /* 7. port  -------------------------------------*/
-    .port{ height:1000px; color:#000; }
+    /* 6. port  -------------------------------------*/
+    .port{
+        height:1000px;
+        color:#000;
+    }
     .port h2{
         padding-top: 20px;
     }
-    .port_wrap{ width:1200px; margin:0 auto; }
+    .port_wrap{
+        width:1200px;
+        margin:0 auto;
+    }
     .port_btn{
-        width:90%; height:50px;
+        width:90%;
+        height:50px;
         margin:0 5% 50px 5%;
     }
     .port_btn button{
-        display:block; float:left;
-        width:160px; height:40px; margin:0 15px;
+        display:block;
+        float:left;
+        width:160px;
+        height:40px;
+        line-height: 42px;
+        margin:0 15px;
         /* border:1px solid #d9d9d9; */
         box-sizing: border-box;
-        font-size:18px; border-radius:10px;
+        font-size:18px;
+        border-radius:10px;
         color:#000;
         font-family: GangwonEdu_OTFBoldA;
     }
     .port_btn button:after{
-        margin:0 -72px 0 61px;
+        margin:0 -79px 0 66px;
         content: '|';
         color:#ccc;
     }
@@ -1036,8 +1106,10 @@ section{float:left; clear:both; width:100%; }
         width:1200px; margin:0 auto;
     }
     .port_wrap li h3{
-        font-size:26px; height:50px;
-        line-height:50px; margin-bottom:60px;
+        font-size:26px;
+        height:50px;
+        line-height:50px;
+        margin-bottom:60px;
     }
     
     .port_table_wrap{
@@ -1049,18 +1121,26 @@ section{float:left; clear:both; width:100%; }
         box-shadow: 4px 4px 4px rgba(23, 83, 126, 0.1);
     }
 
-    .port_wrap>ul>li:nth-child(1)>div>p{
-        width:530px; float:left;
+     .port_wrap>ul>li>div>p{
+        width:530px;
+        float:left;
         margin:30px 0 0 75px;
     }
-    .port_wrap>ul>li:nth-child(1)>div>p img{ width:100%; height:100% }
+    .port_wrap>ul>li>div>p img{
+        width:100%;
+        height:100%
+    }
     
+
+
     .port_wrap>ul>li:nth-child(1) tr p:nth-child(1){
         padding:0 15px;
     }
     .port_wrap>ul>li:nth-child(1) tr p:nth-child(2),
     .port_wrap>ul>li:nth-child(1) tr p:nth-child(3){
-        width:45%; float:left; padding-top:40px;
+        width:45%;
+        float:left;
+        padding-top:40px;
     }
     .port_wrap>ul>li:nth-child(1) tr p:nth-child(2){
         margin:0 2.5% 0 5%;
@@ -1079,50 +1159,52 @@ section{float:left; clear:both; width:100%; }
         color: #000;
     }
     
-    
-    .port_wrap>ul>li:nth-child(1) table{
-        height:400px;
-        border-collapse:collapse;
-        float:right;
-        margin-right:55px;
-        font-size:20px;
+    .port_info{
+        width: 565px;
+        float: left;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 25px 0;
     }
-    .port_wrap>ul>li:nth-child(1) table td{
-        font-size:15px; 
+    .port_info dt{
+        width: 200px;
+        height: 45px;
+        line-height: 50px;
+        font-size: 19px;
     }
-    .port_wrap>ul>li:nth-child(1) table br{ display:none; }
-    .port_wrap>ul>li:nth-child(1) table th{
-        width:150px; height:50px;
-    }
-    
-    .port_wrap>ul>li:nth-child(2) li{
-        width:312px; height:175px; 
-        background:none; float:left;
-        margin:25px 3.5%;
-    }
-    .port_wrap>ul>li:nth-child(3) li{
-        width:250px; height:120px;
-        background:none; float:left;
-        margin:5px 1.5%;
-    }
-    .port_wrap>ul>li:nth-child(3){
-        padding-left:25px;
-    }
-    .port_wrap>ul>li:nth-child(2) li img{
-        width:100%; height:100%;
-    }
-    .port_wrap>ul>li:nth-child(3) li img{
-        width:50%; height:100%;
-    }
-    .port_lang{
+    .port_info dd{
         width: 360px;
+        height: 45px;
+        line-height: 50px;
+        font-size: 18px;
     }
+    
+    .port_explain{
+        width: 565px;
+        height: 160px;
+        float: left;
+    }
+    .port_explain p{
+        width: 215px;
+        float: left;
+    }
+    .port_explain p:nth-of-type(1){
+        width: 565px;
+        height: 60px;
+        line-height: 60px;
+        margin: 0 0 12px 15px;
+        font-size: 18px;
+    }
+    .port_explain p:nth-of-type(2){
+        margin: 0 57px;
+    }
+
     .port_lang span{
         display: block;
         color:#fff;
         height: 25px;
-        line-height: 25px;
-        padding: 0 8px;
+        line-height: 29px;
+        padding: 0 6px;
         border-radius: 5px;
         float: left;
         margin-right:3px;
@@ -1143,17 +1225,25 @@ section{float:left; clear:both; width:100%; }
         background: #570503;
     }
     
-    .port_wrap ul table:nth-of-type(1){ display:none; }
+    .port_wrap ul table:nth-of-type(1){
+        display:none;
+    }
      
     .wd_more_btn1, .wd_more_btn2, .more_btn1, .more_btn2{
         display:none;
     }
-    /* 8. contact  -------------------------------------*/
-    .contact{ clear:both; color:#000; }
+
+    /* 7. contact  -------------------------------------*/
+    .contact{
+        clear:both;
+    }
     .contact_wrap h2{
         padding-top: 20px;
     }
-    .contact_wrap{ width:1100px; margin:0 auto; }
+    .contact_wrap{
+        width:1100px;
+        margin:0 auto;
+    }
     .contact_wrap h2 p{
         font-size: 16px;
         margin: -40px 0 -30px 0;
@@ -1227,19 +1317,25 @@ section{float:left; clear:both; width:100%; }
 
 
 
-    /* 9. footer  -------------------------------------*/
+    /* 8. footer  -------------------------------------*/
     #footer{
-        height:150px;
-        border-top:1px solid #d9d9d9;
+        height:50px;
         text-align:center;
     }
     .footer_wrap p:first-child{
         position:fixed;
-        left: 50%; margin-left:550px;
+        left: 50%;
+        margin-left:550px;
         bottom:30px;
     }
+    .footer_wrap p:last-child{
+        height: 50px;
+        line-height: 50px;
+        font-size: 17px;
+    }
     .footer_wrap button{
-        width:45px; height:45px;
+        width:45px;
+        height:45px;
         margin-top: 17px;
     }
 }
@@ -1250,11 +1346,3 @@ section{float:left; clear:both; width:100%; }
     50%{border-right: 1px solid #000} 
     100%{border-right: 1px solid #fff} 
 }
-/* 공통 */
-.edu_wrap tr:nth-child(1) th{ background:rgb(48, 168, 255,0.07);} 
-.edu_wrap tr:nth-child(2) th{ background:rgb(48, 168, 255,0.09);} 
-.edu_wrap tr:nth-child(3) th{ background:rgb(48, 168, 255,0.11);} 
-.edu_wrap tr:nth-child(4) th{ background:rgb(48, 168, 255,0.13);} 
-.edu_wrap tr:nth-child(5) th{ background:rgb(48, 168, 255,0.15);} 
-.edu_wrap tr:nth-child(6) th{ background:rgb(48, 168, 255,0.17);} 
-.edu_wrap tr:nth-child(7) th{ background:rgb(48, 168, 255,0.20);} 

@@ -5,6 +5,7 @@
 
 var count = 0;
 var ag    = setInterval("autoGallery()",6000);
+
 function autoGallery(){
     var iN = $(".intro li:last").index();
     count += 1;
@@ -48,9 +49,9 @@ function jobMotion(){
         $(".job_chart li:eq(3) p").animate({width:"80%"},1000);
 }
 
-function AddTyping(){
+function AddTyping() {
     $(".typing").text("");  
-    typingIdx     = 0;   
+    var typingIdx = 0;   
     var typingTxt = $(".typing-txt").text();  // 타이핑될 텍스트를 가져온다    
     typingTxt     = typingTxt.split("");      // 한글자씩 자른다.    
     var tyInt     = setInterval(function () 
@@ -65,32 +66,35 @@ function AddTyping(){
     }, 100);  
 } 
 
-$(document).ready(function(){   
+$(document).ready(function() {   
     var check = 0;
-    
-    $(window).scroll(function()
+    AddTyping();
+    $(window).scroll(function() //
     {    
       var sn = $("html,body").scrollTop(); // 실시간으로 변경될 수 있는 스크롤바의 위치값  
+      console.log("sn:", sn)
       if(sn > 500){
           $(".footer_wrap p:eq(0)").fadeIn("slow");
       }else{
           $(".footer_wrap p:eq(0)").fadeOut("slow");
       }
-
-      /* if(sn > 1100){
-        eduMotion();
-      } */
       
       if(sn > 1100){
           jobMotion();
       }
        
-      if(sn > 0 && check == 0){
+      if(sn > 0 && check == 0) {
+        console.log("나스크롤움직였어요요")
         check = 1;
-        AddTyping();
       }
 
-    });  
+    });  /* end */
+
+
+
+
+
+
 
     // 전역메뉴 좌우 슬라이드 조작&애니메이션
     $(".nav_btn button").click(function(){
@@ -184,14 +188,12 @@ $(document).ready(function(){
     });
      
     // profile 
-    $(".profile_wrap dd:not(:first)").hide(); 
+    /* $(".profile_wrap dd:not(:first)").hide(); 
     $(".profile_wrap dt").click(function(){
       $(".profile_wrap dd").stop().slideUp();
       $(this).next().stop().slideDown();
-    });
+    }); */
     
-    // edu 
-    /* $(".edu_wrap table tr").css({ display:"none" }); */
     
     // work  
     $(".job_chart li p").css({ width:0 });

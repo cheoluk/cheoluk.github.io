@@ -865,8 +865,6 @@ section{ clear:both; width:100%; }
         text-align:center;
     }
     #container section h2{
-        height:80px;
-        line-height:80px;
         font-size:35px;
         font-weight: bold;
         margin-bottom: 25px;
@@ -879,7 +877,7 @@ section{ clear:both; width:100%; }
     }
     .profile_wrap h2{
         color:#000;
-        margin:30px 0 15px 0;
+        padding: 30px 0 15px 0;
     }
     .profile_wrap h3{
         font-size: 27px;
@@ -962,7 +960,7 @@ section{ clear:both; width:100%; }
         margin:0 auto;
     }
     .job_wrap h2{
-        margin:20px 0;
+        padding:20px 0;
     }
     .job_chart{
         width:90%;
@@ -1066,7 +1064,7 @@ section{ clear:both; width:100%; }
         color:#000;
     }
     .port h2{
-        padding-top: 20px;
+        padding: 20px 0;
     }
     .port_wrap{
         width:1200px;
@@ -1133,31 +1131,7 @@ section{ clear:both; width:100%; }
     
 
 
-    .port_wrap>ul>li:nth-child(1) tr p:nth-child(1){
-        padding:0 15px;
-    }
-    .port_wrap>ul>li:nth-child(1) tr p:nth-child(2),
-    .port_wrap>ul>li:nth-child(1) tr p:nth-child(3){
-        width:45%;
-        float:left;
-        padding-top:40px;
-    }
-    .port_wrap>ul>li:nth-child(1) tr p:nth-child(2){
-        margin:0 2.5% 0 5%;
-    }
-    .port_wrap>ul>li:nth-child(1) a{
-        display:block;
-        height:50px;
-        line-height:50px;
-        background:#50586C;
-        color:#fff;
-        border-radius: 5px;
-        box-shadow: 2px 2px 2px rgb(207, 206, 206);
-    }
-    .port_wrap>ul>li:nth-child(1) a:hover{
-        background: #fff;
-        color: #000;
-    }
+    
     
     .port_info{
         width: 565px;
@@ -1177,6 +1151,9 @@ section{ clear:both; width:100%; }
         height: 45px;
         line-height: 50px;
         font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .port_explain{
@@ -1199,7 +1176,27 @@ section{ clear:both; width:100%; }
         margin: 0 57px;
     }
 
+    .port_explain p a {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        background: #50586C;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgb(207, 206, 206);
+    }
+    .port_explain p a:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .port_link p:nth-of-type(2){
+        width: 215px;
+        margin: 0 190px;
+    }
+
     .port_lang span{
+        text-align: center;
         display: block;
         color:#fff;
         height: 25px;
@@ -1224,7 +1221,10 @@ section{ clear:both; width:100%; }
     .port_lang span:nth-of-type(5){
         background: #570503;
     }
-    
+    .port_lang_vue span:nth-of-type(1){
+        background: #18c38b;
+    }
+
     .port_wrap ul table:nth-of-type(1){
         display:none;
     }
@@ -1238,7 +1238,9 @@ section{ clear:both; width:100%; }
         clear:both;
     }
     .contact_wrap h2{
-        padding-top: 20px;
+        padding: 20px 0;
+        height: 80px;
+        line-height: 80px;
     }
     .contact_wrap{
         width:1100px;
@@ -1324,8 +1326,7 @@ section{ clear:both; width:100%; }
     }
     .footer_wrap p:first-child{
         position:fixed;
-        left: 50%;
-        margin-left:550px;
+        left: 95%;
         bottom:30px;
     }
     .footer_wrap p:last-child{
@@ -1333,13 +1334,8 @@ section{ clear:both; width:100%; }
         line-height: 50px;
         font-size: 17px;
     }
-    .footer_wrap button{
-        width:45px;
-        height:45px;
-        margin-top: 17px;
-    }
 }
- 
+
 
 @keyframes cursor{ 
     0%{border-right: 1px solid #fff} 

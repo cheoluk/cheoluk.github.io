@@ -72,7 +72,7 @@ $(document).ready(function() {
     $(window).scroll(function() //
     {    
       var sn = $("html,body").scrollTop(); // 실시간으로 변경될 수 있는 스크롤바의 위치값  
-      console.log("sn:", sn)
+      
       if(sn > 500){
           $(".footer_wrap p:eq(0)").fadeIn("slow");
       }else{
@@ -84,7 +84,6 @@ $(document).ready(function() {
       }
        
       if(sn > 0 && check == 0) {
-        console.log("나스크롤움직였어요요")
         check = 1;
       }
 
@@ -228,7 +227,7 @@ $(document).ready(function() {
 
     // footer
     $(".footer_wrap p:eq(0)").hide(); 
-    $(".footer_wrap button").click(function(){
+    $(".footer_wrap p:eq(0)").click(function(){
        $("html,body").stop().animate({scrollTop:0});
     });  
     $('#submitBtn').click(function(){ 

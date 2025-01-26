@@ -198,11 +198,11 @@ $(document).ready(function() {
     $(".job_chart li p").css({ width:0 });
       
     //6. portfolio 
-    $(".port_btn button:eq(0)").css({background: "rgba(48, 168, 255, 0.1)", color:"#000"}); 
+    $(".port_btn button:eq(0)").css({background: "rgba(207, 228, 222, 0.4)", color:"#000"}); 
     $(".port_wrap>ul>li:not(:first)").hide();    
     $(".port_btn button").click(function(){ 
       $(".port_btn button").css({background:"none",color:"#000"});
-      $(this).css({background:"rgba(48, 168, 255, 0.1)", color:"#000"}); 
+      $(this).css({background:"rgba(207, 228, 222, 0.4)", color:"#000"}); 
       $(".port_wrap>ul>li").hide();
       $(".port_wrap>ul>li:eq("+$(this).index()+")").show();
     });

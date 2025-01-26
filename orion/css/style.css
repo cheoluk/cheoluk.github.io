@@ -89,7 +89,7 @@ nav{ float:left; width:600px; height:80px; }
 .content_wrap1>div:nth-child(3){margin:0 60px;}
 
 .content_wrap1 div>p:nth-of-type(2){
-    font-size:18px; font-family:"나눔스퀘어";
+    font-size:17px; font-family:"나눔스퀘어";
     line-height:25px; color:#8c8c8c;
 }
 
@@ -118,7 +118,7 @@ nav{ float:left; width:600px; height:80px; }
     margin-bottom:-5px;
 }
 .content_wrap2>div>div>p:nth-of-type(3){
-    font-size:18px; font-family:"나눔스퀘어_ac";
+    font-size:16px; font-family:"나눔스퀘어_ac";
     color:#8c8c8c; line-height:25px;
 }
 
@@ -155,7 +155,7 @@ nav{ float:left; width:600px; height:80px; }
 .content_wrap3 ol{clear:both; height:200px; margin-left:15px;}
 
 .content_wrap3 li a{
-    font-size:17px; font-family:"나눔스퀘어"; text-align: center;
+    font-size:16x; font-family:"나눔스퀘어"; text-align: center;
     line-height:45px;
 }
 

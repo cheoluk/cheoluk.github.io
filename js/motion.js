@@ -66,9 +66,29 @@ function AddTyping() {
     }, 100);  
 } 
 
+function MobAddTyping() {
+    $(".typing").text("");  
+    var typingIdx = 0;   
+    var typingTxt = $(".typing-txt").text();  // 타이핑될 텍스트를 가져온다    
+    typingTxt     = typingTxt.split("");      // 한글자씩 자른다.    
+    var tyInt     = setInterval(function () 
+    {  
+      if(typingIdx < typingTxt.length)      // 타이핑될 텍스트 길이만큼 반복  
+      {  
+        if(typingIdx == 13) {
+            $(".typing").append("<br>");
+        }
+          $(".typing").append(typingTxt[typingIdx]); // 한글자씩 이어준다.  
+          typingIdx++; 
+      } else{  
+          clearInterval(tyInt); //끝나면 반복종료 
+      }  
+    }, 100);  
+} 
+
 $(document).ready(function() {   
     var check = 0;
-    AddTyping();
+    //AddTyping();
     $(window).scroll(function() //
     {    
       var sn = $("html,body").scrollTop(); // 실시간으로 변경될 수 있는 스크롤바의 위치값  
@@ -112,15 +132,24 @@ $(document).ready(function() {
         minusNum = 80;
         $('.intro').css('height', dh-80);   
         $('.intro ul').css('height', dh-387);
-    }else{ // 모바일&태블릿환경
+
+        AddTyping();
+
+    }else{ 
+        // 모바일&태블릿환경
         minusNum = 0;
+
         $('.intro').css('height', dh-80);   
         $('.intro ul').css('height', dh-150); 
-        if(bw<500){
-          $('#email_text').html('궁금한점이 있으시면<br>언제든지 연락주세요!');
-          $('#data_list').css('font-size','14px'); 
-        }  
-    } 
+
+        if(bw<500) {
+            $('#email_text').html('궁금한점이 있으시면<br>언제든지 연락주세요!');
+            $('#data_list').css('font-size','14px'); 
+            MobAddTyping();
+        }else{
+            AddTyping();
+        }
+    }
     
     $(window).resize(function(){ 
       bw = $(window).width();

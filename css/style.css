@@ -349,6 +349,8 @@ section{ clear:both; width:100%; }
             line-height: 60px;
             margin: 0 0 12px 4px;
             font-size: 13px;
+            overflow: scroll;
+            white-space: nowrap;
         }
         .port_explain p a {
             display: block;

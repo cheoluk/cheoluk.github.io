@@ -64,11 +64,13 @@ section{ clear:both; width:100%; }
     }
     .fa-bars {
         font-size: 29px;
+        color: #000;
     }
     .nav_btn button, .nav_close_btn button{
         width:45px;
         height:45px;
         margin:17px 10px 0 0;
+        color: #000;
     }
     .nav_btn button:hover, .nav_close_btn button:hover{
         background:none;
@@ -573,11 +575,13 @@ section{ clear:both; width:100%; }
     }
     .fa-bars{
         font-size: 29px;
+        color: #000;
     }
     .nav_btn button, .nav_close_btn button{ 
         width:45px;
         height:45px;
         margin:17px 10px 0 0;
+        color: #000;
     }
     .nav_btn button:hover, .nav_close_btn button:hover{
         background:none;

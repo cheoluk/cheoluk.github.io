@@ -1,28 +1,27 @@
-@charset "utf-8"
+@charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @import url('https://cdn.jsdelivr.net/gh/leetaewook/gmarket-sans-dynamic-subset/GmarketSans.css');
 @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 @font-face {
-    font-family: 'GangwonEdu_OTFBoldA';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'yg-jalnan';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-family: 'GongGothicMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-display: swap;
+    src: local('Pretendard ExtraBold'), url(./woff2/Pretendard-ExtraBold.woff2) format('woff2'), url(./woff/Pretendard-ExtraBold.woff) format('woff');
+}
 
 body{
-    font-family:Josefin Sans,Noto Sans KR,Roboto,/* nanumsquare */ /* Gmarket Sans */ GangwonEdu_OTFBoldA ;
-    background-image: url(../images/visual1.jpg);
-    background-size: cover;
-    background-position: center;
+    font-family: GongGothicMedium, Pretendard ;
 
     /* background-repeat: no-repeat;
     
@@ -1111,20 +1110,19 @@ section{ clear:both; width:100%; }
         top:0;
         z-index:1;
         width:100%;
-        height:80px;
+        height:120px;
         
     }
     .header_wrap{
         width:1200px;
-        height:80px;
+        height:120px;
         margin:0 auto;
     }
     h1{
-        font-family: yg-jalnan;
-        /* font-weight: 700; */
-        font-size:25px;
-        line-height: 80px; 
-        padding-left: 30px;
+        font-family: GongGothicMedium;
+        font-weight: 700;
+        font-size:30px;
+        line-height: 120px;
         float:left;
     }
     h1 a{
@@ -1147,11 +1145,11 @@ section{ clear:both; width:100%; }
     .gnb button{
         display:block;
         width:100%;
-        height:80px;
-        font-size:25px;
-        font-weight:bold;
+        height:120px;
+        font-size:18px;
+        font-weight: 500;
         color:#000;
-        font-family: GangwonEdu_OTFBoldA;
+        font-family: Pretendard;
     }
     .gnb button:hover{
         border-bottom:3px solid #000;
@@ -1159,29 +1157,40 @@ section{ clear:both; width:100%; }
     }
     
     
-    #container{
-        margin-top:80px;
+    #container {
+        margin-top:120px;
     }
         
     /* 2. intro  -------------------------------------*/
-    .intro{
-      width:100%;
-      height:100%;
-      overflow:hidden; 
-      /* background: url(../images/intro_bg.jpg) no-repeat center top/cover fixed; */
-    
-    }
-    .intro_wrap{
-        text-align: center;
-        padding-top: 250px;
+    .intro {
+        width: 1200px;
+        overflow: hidden;
+        background: url(../images/b_img_3.png) no-repeat center right;
+        background-position: 100% 136px;
+        margin: 0 auto;
+        height: 651px;
     }
     .intro_wrap h2{
         display:none;
     }
     .typing-txt {
-        display: none;
+        margin-top: 188px;
+        font-family: Pretendard;
     }
-
+    .typing-txt span:nth-of-type(1) {
+        font-size: 50px;
+        font-weight: bold;
+        color: #222222;
+    }
+    .typing-txt span:nth-of-type(2) {
+        font-size: 60px;
+        font-weight: 800;
+        color: #2F71FA;
+    }
+    .typing-txt span:nth-of-type(3) {
+        font-size: 18px;
+        color: #999999;
+    }
     .typing {
         /*position: absolute;*/
         display: inline-block;
@@ -1191,108 +1200,123 @@ section{ clear:both; width:100%; }
         font-size: 40px;
     }
 
-    /* 3. concept  -------------------------------------*/
-    #container section:not(:first-child){
-        height:1000px;
-        text-align:center;
-    }
-    #container section h2{
-        font-size:35px;
-        font-weight: bold;
-        margin-bottom: 25px;
-    }
     
     /* 4. profile  -------------------------------------*/
-    .profile_wrap{
+    #container section:nth-of-type(2) {
+        height: 820px;
+    }
+    .profile {
+        background: url(../images/bg_1_1.png), url(../images/bg_1_2.png) #2F71FA;
+        color: #fff;
+        background-repeat: no-repeat;
+        background-position: top left -125px, bottom right -125px;
+    }
+    .profile_wrap {
         width:1200px;
         margin:0 auto;
     }
-    .profile_wrap h2{
+    .profile_wrap h2 {
+        display: none;
         color:#000;
         padding: 30px 0 15px 0;
     }
-    .profile_wrap h3{
-        font-size: 27px;
-        margin: 30px 0 25px 25px;
+    .profile_wrap h3 {
+        margin-bottom: 15px;
+        font-family: GongGothicMedium;
+        font-weight: 500;
+        font-size: 24px;
     }
-    .profile_wrap>div{
+    .profile_wrap h3:nth-of-type(2) {
+        margin-top: 65px;
+    }
+    .profile_wrap>div {
         width:1200px;
         text-align:left;
         font-size:20px;
     }
-    .profile_img{
+    .profile_img {
         width: 325px;
         height: 440px;
         float: left;
     }
-    .profile_img img{
-        width: 325px;
+    .profile_img img {
+        width: 316px;
     }
-    .profile_img li{
-        width: 320px;
-        height: 385px;
+    .profile_img li {
+        width: 316px;
+        height: 316px;
         border-radius: 23px;
         overflow: hidden;
     }
-    .profile_info{
-        width: 330px;
-        height: 600px;
-        margin-left: 100px;
+    .profile_img p {
+        text-align: center;
+    }
+    .profile_img p:nth-of-type(1) {
+        font-family: GongGothicMedium;
+        font-weight: 500;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    .profile_img p:nth-of-type(2) {
+        font-family: GongGothicMedium;
+        font-weight: 300;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    .profile_info {
+        width: 316px;
+        height: 388px;
+        margin-top: 216px;
         float: left;
-        padding-left: 20px;
     }
-    .profile_info dl{
-        width: 330px;
-        display: flex;
-        flex-flow: row wrap;
-    }
-    .profile_info dt{
-        width: 130px;
-        height: 30px;
-        line-height: 30px;
-    }
-    .profile_info dd{
-        width: 200px;
-        height: 30px;
-        line-height: 30px;
-    }
-    .profile_career{
-        width: 700px;
-        height: 600px;
+    .profile_career {
+        width: 535px;
+        height: 520px;
         float: left;
-        padding-left: 45px;
+        margin: 150px 0 0 241px;
     }
     .profile_career dl {
         width: 660px;
         display: flex;
         flex-flow: row wrap;
-        padding-top: 5px;
+        font-family: Pretendard;
+        font-weight: 300;
+        font-size: 18px;
     }
     .profile_career dt {
-        width: 255px;
-        height: 55px;
-        line-height: 55px;
-        text-indent: 15px;
+        width: 220px;
+        height: 38px;
+        line-height: 38px;
     }
     .profile_career dd {
         width: 400px;
-        height: 55px;
-        line-height: 55px;
+        height: 38px;
+        line-height: 38px;
     }
 
     
     /* 5. job  -------------------------------------*/
-    .job{
+    #container section:nth-of-type(3) {
+        height: 735px;
+        text-align: center;
+    }
+    .job {
         height:1000px;
         color:#000;
+        background: #F3F6F9;
     }
-    .job_wrap{
+    .job_wrap {
         width:1200px;
+        height: 735px;
         margin:0 auto;
     }
-    .job_wrap h2{
-        padding:20px 0;
-    }
+    .job_wrap h2 {
+        padding: 150px 0 60px 0;
+        font-family: Pretendard;
+        font-size: 40px;
+        font-weight: 800;
+        color: #222222;
+    }/* 
     .job_chart{
         width:90%;
         margin:0 5% 50px 5%;
@@ -1300,7 +1324,7 @@ section{ clear:both; width:100%; }
     .job_chart li{
         width:100%;
         height:40px;
-        /* border:1px solid #d9d9d9; */
+        
         margin:10px 0;
         line-height:40px;
         color:#fff;
@@ -1328,354 +1352,324 @@ section{ clear:both; width:100%; }
     .job_chart li:nth-child(4) p{
         width:80%;
         background:#59b254;
-    }
+    } */
     
 
-    .job_info li{
-        width:380px;
-        height:180px;
-        float:left;
-        padding-top:25px; 
-        background:rgba(207, 228, 222, 0.4);
-        /* background: #DCE2F0; */
-        margin:10px;
-        border-radius:23px;
+    .job_info li {
+        width: 270px;
+        height: 327px;
+        float: left;
+        background: #fff;
+        border-radius: 23px;
+        border: 1px solid #E2E5EC;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.1);
     }
-    
-    .job_info li:nth-child(1){
-        margin-left:210px;
+    .job_info li:nth-of-type(1) {
+        margin-right: 20px;
     }
-    .job_info li:nth-child(3){
-        margin-left:210px;
+    .job_info li:nth-of-type(2), .job_info li:nth-of-type(3) {
+        margin: 0 20px;
     }
-    
-    .job_info li p{
+    .job_info li:nth-of-type(4) {
+        margin-left: 20px;
+    }
+    .job_info li p {
         text-align: left;
+        font-family: Pretendard;
     }
-    .job_info li p:nth-child(2){
-        height:60px;
-        line-height:70px;
-        font-size:20px;
-        font-weight: bold;
-        text-indent: 10px;
-        margin-bottom: 10px;
+    .job_info li p:nth-child(2) {
+        font-size: 24px;
+        font-weight: 800;
+        text-indent: 40px;
+        margin: 31px 0 10px 0;
+        color: #222222;
     }
-    .job_info li p:nth-child(3){
-        margin:5px 35px 15px;
-        font-size:17px;
+    .job_info li p:nth-child(3) {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 35px 0 40px;
+        color: #555555;
+        line-height: 25px;
     }
-
-    .job_info li img{
-        float:left;
-        margin-left:25px;
-    }
-    
-    .job_info li:nth-child(1) p:nth-child(2){
-        color:#ff782f;
-    }
-    .job_info li:nth-child(2) p:nth-child(2){
-        color:#0760ff;
-    }
-    .job_info li:nth-child(3) p:nth-child(2){
-        color:#ffce52;
-    }
-    .job_info li:nth-child(4) img{
-        width:13%;
-        height:28%;
-        margin:5px 0 0 35px;
-    }
-    .job_info li:nth-child(4) p:nth-child(2){
-        color:#59b254;
+    .job_info li img {
+        text-align: left;
+        display: block;
+        margin: 40px 0 0 40px;
     }
 
 
     /* 6. port  -------------------------------------*/
-    .port{
-        height:1000px;
+    #container section:nth-of-type(4) {
+        height: 925px;
+        background: url(../images/Rectangle.png);
+        background-repeat: no-repeat;
+        background-position: 100% 66%;
+    }
+    .port {
         color:#000;
     }
-    .port h2{
-        padding: 20px 0;
+    .port h2 {
+        font-family: Pretendard;
+        font-size: 40px;
+        font-weight: 800;
+        color: #222222;
     }
-    .port_wrap{
-        width:1200px;
-        margin:0 auto;
+    .port_wrap {
+        width: 1200px;
+        height: 625px;
+        margin: 0 auto;
+        padding-top: 150px;
     }
-    .port_btn{
-        width:90%;
-        height:50px;
-        margin:0 5% 50px 5%;
+    .btn_on {
+        color: #2F71FA;
     }
-    .port_btn button{
-        display:block;
-        float:left;
-        width:160px;
-        height:40px;
-        line-height: 42px;
-        margin:0 15px;
-        /* border:1px solid #d9d9d9; */
+    .port_btn {
+        float: right;
+        margin-top: -30px;
+        color: #CCCCCC;
+    }
+    .port_btn button {
+        display: block;
+        float: left;
+        margin: 0 15px;
         box-sizing: border-box;
-        font-size:18px;
-        border-radius:10px;
-        color:#000;
-        font-family: GangwonEdu_OTFBoldA;
+        border-radius: 10px;
+        font-family: Pretendard;
+        font-size: 24px;
+        font-weight: 800;
     }
-    .port_btn button:after{
-        margin:0 -79px 0 66px;
-        content: '|';
-        color:#ccc;
+    .port_btn button:hover {
+        color: #2F71FA;
     }
-    .port_btn button:nth-of-type(3)::after{
-        content: '';
+    .port_wrap ul {
+        width: 1200px;
+        margin: 150px auto 0;
     }
-    .port_btn button:hover{
-        background: rgba(207, 228, 222, 0.4);
+    .port_wrap li h3 {
+        font-family: Pretendard;
+        font-size: 30px;
+        font-weight: 800;
+        color: #222222;
     }
-    .port_wrap ul{
-        width:1200px; margin:0 auto;
-    }
-    .port_wrap li h3{
-        font-size:26px;
-        height:50px;
-        line-height:50px;
-        margin-bottom:60px;
-    }
-    
-    .port_table_wrap{
-        width:1200px;
+    .port_wrap li {
+        width: 1200px;
         height: 400px;
-        background: rgba(207, 228, 222, 0.5);
-        padding-top: 30px;
-        border-radius: 25px;
-        box-shadow: 4px 4px 4px rgba(23, 83, 126, 0.1);
+    }
+    .port_wrap li:nth-of-type(1) {
+        background: url(../images/port.png);
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+    .port_wrap li:nth-of-type(2) {
+        background: url(../images/port2.png);
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+    .port_wrap li:nth-of-type(3) {
+        background: url(../images/port3.png);
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+    .port_table_wrap {
+        width: 493px;
     }
     
-    .port_table_wrap>p{
-        width:530px;
-        float:left;
-        margin:30px 0 0 75px;
-        background: #d9d9d9;
-        height: 320px;
-    }
-    .port_table_wrap img{
-        width:100%;
-        height:100%
-    }
-    .port_vue_img img{
-        width: 46%;
-        height: 100%
-    }
-
-
-    
-    
-    .port_info{
+    .port_info {
         width: 565px;
         float: left;
         display: flex;
         flex-flow: row wrap;
-        padding: 25px 0;
+        padding-top: 25px;
     }
-    .port_info dt{
-        width: 200px;
+    .port_info dt {
+        width: 105px;
         height: 45px;
         line-height: 50px;
-        font-size: 19px;
+        font-family: Pretendard;
+        font-size: 18px;
+        font-weight: 600;
+        color: #222222;
     }
-    .port_info dd{
+    .port_info dd {
         width: 360px;
         height: 45px;
         line-height: 50px;
+        font-family: Pretendard;
         font-size: 18px;
+        font-weight: 400;
         display: flex;
-        justify-content: center;
         align-items: center;
+        color: #555555;
     }
     
-    .port_explain{
+    .port_explain {
         width: 565px;
         height: 160px;
         float: left;
     }
-    .port_explain p{
-        width: 215px;
+    .port_explain p {
+        width: 180px;
+        height: 60px;
         float: left;
     }
-    .port_explain p:nth-of-type(1){
+    .port_explain p:nth-of-type(1) {
         width: 565px;
         height: 60px;
         line-height: 60px;
-        margin: 0 0 12px 15px;
+        font-family: Pretendard;
         font-size: 18px;
+        font-weight: 400;
+        color: #222222;
+        margin-bottom: 25px;
     }
-    .port_explain p:nth-of-type(2){
-        margin: 0 57px;
+    .port_explain p:nth-of-type(3) {
+        margin-left: 10px;
     }
 
     .port_explain p a {
         display: block;
-        height: 50px;
-        line-height: 50px;
-        background: #fff;
-        color: #000;
-        border-radius: 5px;
-        box-shadow: 2px 2px 2px rgb(186 213 205);
+        height: 60px;
+        line-height: 60px;
+        background: #222;
+        color: #fff;
+        border-radius: 100px;
+        border: 1px solid #222222;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
     }
     .port_explain p a:hover {
-        background: rgb(186 213 205);
-        color: #000;
+        background: #fff;
+        color: #222;
     }
 
-    .port_link p:nth-of-type(2){
-        width: 215px;
-        margin: 0 190px;
+    .port_link p:nth-of-type(2) {
+        width: 180px;
     }
 
-    .port_lang span{
-        text-align: center;
-        display: block;
-        color:#fff;
+    .port_lang span:not(:first-child) {
+        margin-left: 15px;
+    }
+    .port_lang span:nth-of-type(1) {
+        background: url(../images/small_icon_1.png);
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 29px;
+    }
+    .port_lang span:nth-of-type(2) {
+        background: url(../images/small_icon_2.png);
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 28px;
+    }
+    .port_lang span:nth-of-type(3) {
+        background: url(../images/small_icon_3.png);
+        background-repeat: no-repeat;
+        width: 25px;
         height: 25px;
-        line-height: 29px;
-        padding: 0 6px;
-        border-radius: 5px;
-        float: left;
-        margin-right:3px;
     }
-    .port_lang span:nth-of-type(1){
-        background: #ff782f;
+    .port_lang span:nth-of-type(4) {
+        background: url(../images/small_icon_4.png);
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 24px;
     }
-    .port_lang span:nth-of-type(2){
-        background: #0760ff;
+    .port_lang span:nth-of-type(5) {
+        background: url(../images/small_icon_5.png);
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 24px;
     }
-    .port_lang span:nth-of-type(3){
-        background: #ffce52;
+    .port_lang_vue span:not(:first-child) {
+        margin-left: 15px;
     }
-    .port_lang span:nth-of-type(4){
-        background: #011f81;
+    .port_lang_vue span:nth-of-type(1) {
+        background: url(../images/small_icon_6.png);
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 28px;
     }
-    .port_lang span:nth-of-type(5){
-        background: #570503;
+    .port_lang_vue span:nth-of-type(2) {
+        background: url(../images/small_icon_2.png);
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 29px;
     }
-    .port_lang_vue span:nth-of-type(1){
-        background: #18c38b;
-    }
-
-
+    
     /* 7. contact  -------------------------------------*/
-    .contact{
-        clear:both;
+    #container section:nth-of-type(5) {
+        text-align: center;
+        height: 740px;
+        background: url(../images/bg_2.png);
+        background-repeat: no-repeat;
+        color: #fff;
+    }
+    .contact_wrap {
+        width: 1200px;
+        margin: 0 auto;
     }
     .contact_wrap h2{
-        padding: 20px 0;
-        height: 80px;
-        line-height: 80px;
-    }
-    .contact_wrap{
-        width:1100px;
-        margin:0 auto;
+        padding-top: 150px;
+        font-family: Pretendard;
+        font-size: 40px;
+        font-weight: 800;
     }
     .contact_wrap h2 p{
+        font-family: Pretendard;
         font-size: 16px;
-        margin: -40px 0 -30px 0;
+        font-weight: 400;
+        margin-top: 10px;
     }
-    .contact_wrap h2 p::after{
-        position: absolute;
-        content: '\f078';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 35px;
-        animation: motion 1.3s linear 0s infinite;
-        margin-top: 0;
-        transform: translate(-50%, 0%);
-    }
-    @keyframes motion {
-        0% {
-            margin-top: 0px;
-        }
-
-        20% {
-            margin-top: 10px;
-        }
-
-        40% {
-            margin-top: 0px;
-        }
-
-        60% {
-            margin-top: 10px;
-        }
-
-        80% {
-            margin-top: 0px;
-        }
-
-        100% {
-            margin-top: 0px;
-        }
-    }
-
-
-
-
 
     .contact_info{
-        width: 800px;
-        height: 300px;
-        padding-top: 150px;
+        width: 1200px;
+        height: 260px;
+        padding-top: 100px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
     }
     .contact_info li{
         float: left;
-        width: 350px;
-        height: 140px;
-        text-align: left;
-        text-indent: 35px;
-        padding-top: 20px;
-        margin-left: 50px;
+        width: 280px;
+        height: 260px;
+        text-align: center;
+        border-radius: 30px;
     }
-    .contact_info li p{
-        margin-top: 20px;
+    .contact_info li:nth-of-type(1) {
+        background: url(../images/address_icon.png), rgba(255, 255, 255, 0.1);
+        background-repeat: no-repeat;
+        background-position: 120px 60px;
     }
-    .address::before{
-        content: '\f3c5';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 29px;
-        margin-right: 15px;
+    .contact_info li:nth-of-type(2) {
+        background: url(../images/cellphone_icon.png), rgba(255, 255, 255, 0.1);
+        background-repeat: no-repeat;
+        background-position: 122px 60px;
     }
-    .address p{
-        margin-left: 40px;
+    .contact_info li:nth-of-type(3) {
+        background: url(../images/e-mail_icon.png), rgba(255, 255, 255, 0.1);
+        background-repeat: no-repeat;
+        background-position: 113px 60px;
     }
-    .cellphone::before{
-        content: '\f3cf';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 29px;
-        margin-right: 15px;
+    .contact_info li:nth-of-type(4) {
+        background: url(../images/website_icon.png), rgba(255, 255, 255, 0.1);
+        background-repeat: no-repeat;
+        background-position: 114px 60px;
     }
-    .cellphone p{
-        margin-left: 40px;
+
+    .contact_info li p:first-child {
+        margin-top: 152px;
+        font-family: Pretendard;
+        font-size: 20px;
+        font-weight: 700;
     }
-    .email::before{
-        content: '\f0e0';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 29px;
-        margin-right: 15px;
-    }
-    .email p{
-        margin-left: 50px;
-    }
-    .website::before{
-        content: '\f015';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 29px;
-        margin-right: 15px;
-    }
-    .website p{
-        margin-left: 52px;
+    .contact_info li p:last-child {
+        margin-top: 15px;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-weight: 400;
     }
 
 
@@ -1684,24 +1678,33 @@ section{ clear:both; width:100%; }
 
     /* 8. footer  -------------------------------------*/
     #footer{
-        height:50px;
+        height:220px;
         text-align:center;
+        color: #fff;
+        background-color: #343A45;
     }
-    .footer_wrap p:first-child{
-        position:fixed;
+    #footer h2 {
+        font-family: GongGothicMedium;
+        font-size: 27px;
+        font-weight: 700;
+        padding-top: 75px;
+    }
+    .footer_wrap p:first-child {
+        position: fixed;
         left: 95%;
-        bottom:30px;
+        bottom: 30px;
     }
-    .footer_wrap p:last-child{
-        height: 50px;
-        line-height: 50px;
-        font-size: 17px;
+    .footer_wrap p:last-child {
+        font-family: Pretendard;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 20px;
     }
 
-    .fa-circle-chevron-up{
+    .fa-circle-chevron-up {
         cursor: pointer;
     }
-    .fa-circle-chevron-up:hover{
+    .fa-circle-chevron-up:hover {
         opacity: 0.7;
     }
 }

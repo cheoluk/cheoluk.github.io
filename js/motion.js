@@ -3,7 +3,7 @@
  * 
  */
 
-var count = 0;
+/* var count = 0;
 var ag    = setInterval("autoGallery()",6000);
 
 function autoGallery(){
@@ -24,7 +24,7 @@ function autoGallery(){
             $(".intro_btn button:eq("+count+")").css({background:"url(images/intro_btn_now.png)no-repeat center top"});
         });
     }
-}
+} */
 
 /* function eduMotion(){
     $(".edu_wrap table tr:eq(0)").fadeIn(300,function(){
@@ -42,13 +42,14 @@ function autoGallery(){
     });    
 } */
 
-function jobMotion(){
+/* function jobMotion(){
         $(".job_chart li:eq(0) p").animate({width:"90%"},800);
         $(".job_chart li:eq(1) p").animate({width:"95%"},600);
         $(".job_chart li:eq(2) p").animate({width:"85%"},1200);
         $(".job_chart li:eq(3) p").animate({width:"80%"},1000);
-}
+} */
 
+/*
 function AddTyping() {
     $(".typing").text("");  
     var typingIdx = 0;   
@@ -64,7 +65,8 @@ function AddTyping() {
           clearInterval(tyInt); //끝나면 반복종료 
       }  
     }, 100);  
-} 
+}
+
 
 function MobAddTyping() {
     $(".typing").text("");  
@@ -85,6 +87,9 @@ function MobAddTyping() {
       }  
     }, 100);  
 } 
+*/
+
+
 
 $(document).ready(function() {   
     var check = 0;
@@ -99,41 +104,74 @@ $(document).ready(function() {
           $(".footer_wrap p:eq(0)").fadeOut("slow");
       }
       
-      if(sn > 1100){
+      /* if(sn > 1100){
           jobMotion();
-      }
+      } */
        
       if(sn > 0 && check == 0) {
         check = 1;
       }
 
     });  /* end */
+    
 
+    
+    const headerHeight = 120;
 
+    // 각 섹션의 offset top 값을 미리 계산
+    const introOffset = 0;
+    const profileOffset = 891;
+    const skillsOffset = profileOffset + 820;
+    const portfolioOffset = skillsOffset + 735;
+    const contactOffset = portfolioOffset + 925;
 
+    $(".gnb li button").click(function () {
+        const index = $(this).parent().index();
+        let targetOffset = 0;
 
+        switch (index) {
+            case 0:
+                targetOffset = introOffset;
+                break;
+            case 1:
+                targetOffset = profileOffset;
+                break;
+            case 2:
+                targetOffset = skillsOffset;
+                break;
+            case 3:
+                targetOffset = portfolioOffset;
+                break;
+            case 4:
+                targetOffset = contactOffset;
+                break;
+        }
+
+        $("html, body").animate({
+            scrollTop: targetOffset - headerHeight
+        }, 300); // 0.5초 애니메이션
+    });
 
 
 
     // 전역메뉴 좌우 슬라이드 조작&애니메이션
-    $(".nav_btn button").click(function(){
+    /* $(".nav_btn button").click(function(){
         $("nav").stop().animate({marginLeft:0});
     });
     $(".nav_close_btn button").click(function(){
         $("nav").stop().animate({marginLeft:"-100%"});
-    }); 
+    });  */
     
     // 전역메뉴 클릭시 스크롤의 위치에 적용되는 이동값에
     // 데스크탑과, 모바일(태블릿)에 차등된 연산이 필요 
-    var minusNum = 80; 
+    /* var minusNum = 120; 
     var bw       = $(window).width();   //(b)rowser (w)idth : 브라우저 너비값 기록변수
     var dh       = $(window).height();  
     if(bw>=1200){ // 데스크탑 환경
-        minusNum = 80;
-        $('.intro').css('height', dh-80);   
+        minusNum = 120;
+        $('.intro').css('height', dh-120);   
         $('.intro ul').css('height', dh-387);
 
-        AddTyping();
 
     }else{ 
         // 모바일&태블릿환경
@@ -145,9 +183,9 @@ $(document).ready(function() {
         if(bw<500) {
             $('#email_text').html('궁금한점이 있으시면<br>언제든지 연락주세요!');
             $('#data_list').css('font-size','14px'); 
-            MobAddTyping();
+
         }else{
-            AddTyping();
+
         }
     }
     
@@ -155,8 +193,8 @@ $(document).ready(function() {
       bw = $(window).width();
       dh = $(window).height();  
       if(bw>=1200){ // 데스크탑 환경
-          minusNum = 80;   
-          $('.intro').css('height', dh-80);   
+          minusNum = 120;   
+          $('.intro').css('height', dh-120);   
           $('.intro ul').css('height', dh-387);
       }else{ // 모바일&태블릿환경
           minusNum = 0;  
@@ -186,17 +224,17 @@ $(document).ready(function() {
               $("html,body").stop().animate({scrollTop:0});
           };
       } 
-    });
+    }); */
     
     // 인트로 좌우 슬라이드 조작[바형식의 네비게이션 버튼]&애니메이션
-    $(".intro_btn button:last").hide(); 
+    /* $(".intro_btn button:last").hide(); 
     $(".intro_btn").css({marginLeft:"-60px"});
     $(".intro_btn button:eq(0)").css({background:"url(images/intro_btn_now.png)no-repeat center top"});
     $(".intro_btn button:eq(1)").css({background:"url(images/intro_btn.png)no-repeat center top"});
-    $(".intro_btn button:eq(2)").css({background:"url(images/intro_btn.png)no-repeat center top"});
+    $(".intro_btn button:eq(2)").css({background:"url(images/intro_btn.png)no-repeat center top"}); */
      
     // 1,2,3 인트로 버튼
-    $(".intro_btn button:not(:last)").click(function(){
+    /* $(".intro_btn button:not(:last)").click(function(){
       clearInterval(ag);
       $(".intro_btn button:last").fadeIn("fast");
       $(".intro_btn").stop().animate({marginLeft:"-85px"});
@@ -206,14 +244,14 @@ $(document).ready(function() {
       
       $(".intro_btn button:not(:last)").css({background:"url(images/intro_btn.png)no-repeat center top"});
       $(".intro_btn button:eq("+count+")").css({background:"url(images/intro_btn_now.png)no-repeat center top"});
-    });
+    }); */
 
     //play 인트로 버튼
-    $(".intro_btn button:last").click(function(){
+    /* $(".intro_btn button:last").click(function(){
       ag = setInterval("autoGallery()",3000);
       $(".intro_btn").stop().animate({marginLeft:"-60px"});
       $(this).fadeOut("fast");
-    });
+    }); */
      
     // profile 
     /* $(".profile_wrap dd:not(:first)").hide(); 
@@ -224,19 +262,31 @@ $(document).ready(function() {
     
     
     // work  
-    $(".job_chart li p").css({ width:0 });
+    /* $(".job_chart li p").css({ width:0 }); */
       
     //6. portfolio 
-    $(".port_btn button:eq(0)").css({background: "rgba(207, 228, 222, 0.4)", color:"#000"}); 
+    /* $(".port_btn button:eq(0)").css({color:"#2F71FA"}); 
     $(".port_wrap>ul>li:not(:first)").hide();    
     $(".port_btn button").click(function(){ 
-      $(".port_btn button").css({background:"none",color:"#000"});
-      $(this).css({background:"rgba(207, 228, 222, 0.4)", color:"#000"}); 
+      //$(".port_btn button").css({color:"#CCCCCC"});
+      $(".port_btn button").removeAttr('style');
+      $(this).css({color:"#2F71FA"});
       $(".port_wrap>ul>li").hide();
       $(".port_wrap>ul>li:eq("+$(this).index()+")").show();
+    }); */
+
+    // 포트폴리오 버튼
+    $(".port_btn button:eq(0)").addClass("btn_on").css({color:"#2F71FA"}); // 첫 버튼 활성화
+    $(".port_btn button").not(".btn_on").css({color:"#CCCCCC"}); // 나머지 회색 처리
+    $(".port_wrap>ul>li:not(:first)").hide(); 
+    $(".port_btn button").click(function(){ 
+        $(".port_btn button").removeClass("btn_on").css({color:"#CCCCCC"}); // 전체 비활성화 + 회색
+        $(this).addClass("btn_on").css({color:"#2F71FA"}); // 클릭된 버튼만 활성화 + 기본 색
+        $(".port_wrap>ul>li").hide();
+        $(".port_wrap>ul>li:eq("+$(this).index()+")").show();
     });
      
-    $(".more_btn1").click(function(){
+    /* $(".more_btn1").click(function(){
       $(".check_li_img1").show();
       $(".check_li_img2").hide();
     });
@@ -252,7 +302,7 @@ $(document).ready(function() {
     $(".wd_more_btn2").click(function(){
       $(".check_li_img3").hide();
       $(".check_li_img4").show();
-    });
+    }); */
 
     // footer
     $(".footer_wrap p:eq(0)").hide(); 

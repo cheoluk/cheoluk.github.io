@@ -155,12 +155,12 @@ $(document).ready(function() {
 
 
     // 전역메뉴 좌우 슬라이드 조작&애니메이션
-    /* $(".nav_btn button").click(function(){
+    $(".nav_btn button").click(function(){
         $("nav").stop().animate({marginLeft:0});
     });
     $(".nav_close_btn button").click(function(){
         $("nav").stop().animate({marginLeft:"-100%"});
-    });  */
+    }); 
     
     // 전역메뉴 클릭시 스크롤의 위치에 적용되는 이동값에
     // 데스크탑과, 모바일(태블릿)에 차등된 연산이 필요 

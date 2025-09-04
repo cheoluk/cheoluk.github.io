@@ -264,7 +264,11 @@ section{ clear:both; width:100%; }
     /* port  -------------------------------------*/
 
     #container section:nth-of-type(4) {
-        height: 1276px;
+        height: 1100px;
+        background: url(../images/Rectangle_mo.png);
+        background-repeat: no-repeat;
+        background-position: -103% 23%;
+        background-size: 122% 331px;
     }
 
     .port {
@@ -276,89 +280,93 @@ section{ clear:both; width:100%; }
         font-size: 35px;
         font-weight: 800;
         color: #222222;
-        padding: 70px 0 50px 0;
+        padding: 70px 0 20px 0;
     }
-    .port_btn{
+    .port_btn {
         width: 90%;
         height: 50px;
         margin: 0 5% 15px;
     }
-    .port_btn button{
-        display:block;
-        float:left;
-        width:30%;
-        height:40px;
-        margin:0 1.6%;
+    .port_btn button {
+        display: block;
+        float: left;
+        width: 33%;
+        height: 40px;
         box-sizing: border-box;
-        font-size:18px;
-        border-radius:10px;
-        color: #000;
-        font-family: GangwonEdu_OTFBoldA;
+        font-family: Pretendard;
+        font-size: 22px;
+        font-weight: 800;
     }
-    .port_btn button:after {
-        margin: 0 -44% 0 37%;
-        content: '|';
-        color: #ccc;
-    }
-    .port_btn button:nth-of-type(3)::after {
-        content: '';
-    }
-    .port_wrap ul{
+    .port_wrap ul {
         width: 90%;
+        height: 1065px;
         margin:0 auto;
     }
+    
+    .port_wrap li {
+        height: 500px;
+    }
 
-    .port_wrap li h3{
-        font-size:22px;
-        height:50px;
-        line-height:50px;
-        margin-bottom:25px;
+    .port_wrap li h3 {
+        height: 50px;
+        line-height: 50px;
+        padding-top: 385px;
+        font-family: Pretendard;
+        font-size: 24px;
+        font-weight: 800;
+        text-align: center;
+        color: #222;
     }
-    .port_table_wrap>p {
-        width: 90%;
-        float: left;
-        margin: 0 5% 20px;
+
+    .port_wrap li:nth-of-type(1) {
+        background: url(../images/port_mo.png);
+        background-repeat: no-repeat;
+        background-position: 100% 27%;
+        background-size: contain;
     }
-    .port_vue_img>p {
-        width: 90%;
-        float: left;
-        background: #d9d9d9;
-        margin: 0 5% 20px;
+
+    .port_wrap li:nth-of-type(2) {
+        background: url(../images/port2_mo.png);
+        background-repeat: no-repeat;
+        background-position: 100% 27%;
+        background-size: contain;
     }
-    .port_table_wrap {
-        width: 100%;
+
+    .port_wrap li:nth-of-type(3) {
+        background: url(../images/port3_mo.png);
+        background-repeat: no-repeat;
+        background-position: 100% 27%;
+        background-size: contain;
     }
-    .port_table_wrap img {
-        width: 100%;
-        height: 100%
-    }
-    .port_vue_img img {
-        width: 46%;
-        height: 100%
-    }
+
+    
 
     .port_info {
         width: 100%;
         float: left;
         display: block;
         padding: 15px 0;
+        font-size: 20px;
+        height: 200px;
     }
-
     .port_info dt {
-        width: 100%;
-        height: 35px;
+        width: 25%;
+        height: 50px;
         line-height: 40px;
-        font-size: 19px;
+        float: left;
+        font-family: Pretendard;
+        font-weight: 600;
+        color: #222;
     }
 
     .port_info dd {
-        width: 100%;
-        height: 35px;
+        width: 75%;
+        height: 50px;
         line-height: 40px;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        float: left;
+        font-family: Pretendard;
+        font-weight: 400;
+        color: #555;
     }
 
     .port_explain {
@@ -368,207 +376,221 @@ section{ clear:both; width:100%; }
     }
 
     .port_explain p {
-        width: 40%;
+        width: 42%;
         float: left;
-        margin: 0 5%;
+        margin: 0 4%;
     }
 
     .port_explain p:nth-of-type(1) {
         width: 100%;
         height: 60px;
-        line-height: 60px;
-        margin: 0 0 12px 4px;
-        font-size: 13px;
-        overflow: scroll;
-        white-space: nowrap;
+        line-height: 28px;
+        margin: 0 0 25px 4px;
+        font-family: Pretendard;
+        font-size: 20px;
+        font-weight: 400;
+        color: #222;
     }
-    .port_explain p a {
+    .port_explain p:nth-of-type(2) a {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        background: #222;
+        color: #fff;
+        border-radius: 30px;
+        border: 1px solid #222222;
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 17px;
+        font-weight: 700;
+    }
+    .port_explain p:nth-of-type(3) a {
         display: block;
         height: 50px;
         line-height: 50px;
         background: #fff;
-        color: #000;
-        border-radius: 5px;
-        box-shadow: 2px 2px 2px rgb(186 213 205);
+        color: #222;
+        border-radius: 30px;
+        border: 1px solid #222222;
+        text-align: center;
+        font-family: Pretendard;
+        font-size: 17px;
+        font-weight: 700;
     }
     .port_link p:nth-of-type(2) {
-        width: 65%;
-        margin: 0 17.5%;
+        width: 50%;
+        margin: 0 25%;
     }
 
     .port_lang span {
-        text-align: center;
-        display: block;
-        color: #fff;
-        height: 19px;
-        line-height: 24px;
-        padding: 0 3px;
-        border-radius: 5px;
         float: left;
-        margin-right: 3px;
+        margin-top: 7px;
+    }
+    
+    .port_lang span:not(:first-child) {
+        margin-left: 15px;
     }
 
     .port_lang span:nth-of-type(1) {
-        background: #ff782f;
+        background: url(../images/small_icon_1.png);
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 29px;
     }
 
     .port_lang span:nth-of-type(2) {
-        background: #0760ff;
+        background: url(../images/small_icon_2.png);
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 28px;
     }
 
     .port_lang span:nth-of-type(3) {
-        background: #ffce52;
+        background: url(../images/small_icon_3.png);
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
     }
 
     .port_lang span:nth-of-type(4) {
-        background: #011f81;
+        background: url(../images/small_icon_4.png);
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 24px;
     }
 
     .port_lang span:nth-of-type(5) {
-        background: #570503;
+        background: url(../images/small_icon_5.png);
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 24px;
+    }
+
+    .port_lang_vue span:not(:first-child) {
+        margin-left: 15px;
     }
 
     .port_lang_vue span:nth-of-type(1) {
-        background: #18c38b;
+        background: url(../images/small_icon_6.png);
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 28px;
+    }
+
+    .port_lang_vue span:nth-of-type(2) {
+        background: url(../images/small_icon_2.png);
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 29px;
     }
     
     /* contact  -------------------------------------*/
-    .contact{
-        clear:both;
+
+    #container section:nth-of-type(5) {
+        text-align: center;
+        height: 916px;
+        background: url(../images/bg_2_mo.png);
+        background-repeat: no-repeat;
+        color: #fff;
     }
+
     .contact_wrap{
-        width:90%;
-        margin:0 5%;
+        width:100%;
     }
     .contact_wrap h2 {
         display: block;
-        padding: 40px 0 75px;
+        padding: 100px 0 100px;
         height: 80px;
-        line-height: 35px;
-        font-size: 30px;
+        line-height: 40px;
+        font-family: Pretendard;
+        font-size: 33px;
+        font-weight: 800;
     }
     .contact_wrap h2 p {
-        font-size: 16px;
+        font-family: Pretendard;
+        font-size: 17px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
     }
-    .contact_wrap h2 p::after {
-        position: absolute;
-        content: '\f078';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 27px;
-        animation: motion 1.3s linear 0s infinite;
-        margin-top: 0;
-        transform: translate(-50%, 0%);
-    }
-    @keyframes motion {
-        0% {
-            margin-top: 0px;
-        }
-
-        20% {
-            margin-top: 10px;
-        }
-
-        40% {
-            margin-top: 0px;
-        }
-
-        60% {
-            margin-top: 10px;
-        }
-
-        80% {
-            margin-top: 0px;
-        }
-
-        100% {
-            margin-top: 0px;
-        }
-    }
-
     .contact_info {
-        width: 345px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
     }
-
     .contact_info li {
         float: left;
-        width: 190px;
-        height: 120px;
-        text-align: left;
-        padding-top: 20px;
+        width: 45%;
+        height: 210px;
+        text-align: center;
+        border-radius: 30px;
+        margin-bottom: 15px;
     }
 
-    .contact_info li p {
-        margin-top: 20px;
+    .contact_info li:nth-of-type(1) {
+        background: url(../images/address_icon.png), rgba(255, 255, 255, 0.1);
+        background-repeat: no-repeat;
+        background-position: 50% 25%;
     }
 
-    .address::before {
-        content: '\f3c5';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 29px;
-        margin-right: 15px;
+    .contact_info li:nth-of-type(2) {
+        background: url(../images/cellphone_icon.png), rgba(255, 255, 255, 0.1);
+        background-repeat: no-repeat;
+        background-position: 50% 25%;
     }
 
-    .address p {
-        margin-left: 40px;
+    .contact_info li:nth-of-type(3) {
+        background: url(../images/e-mail_icon.png), rgba(255, 255, 255, 0.1);
+        background-repeat: no-repeat;
+        background-position: 50% 25%;
     }
 
-    .cellphone::before {
-        content: '\f3cf';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 29px;
-        margin-right: 15px;
+    .contact_info li:nth-of-type(4) {
+        background: url(../images/website_icon.png), rgba(255, 255, 255, 0.1);
+        background-repeat: no-repeat;
+        background-position: 50% 25%;
     }
 
-    .cellphone p {
-        margin-left: 40px;
+    .contact_info li p:first-child {
+        margin-top: 120px;
+        font-family: Pretendard;
+        font-size: 20px;
+        font-weight: 700;
     }
 
-    .email::before {
-        content: '\f0e0';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 29px;
-        margin-right: 15px;
+    .contact_info li p:last-child {
+        margin-top: 10px;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-weight: 400;
     }
 
-    .email p {
-        margin-left: 50px;
-    }
 
-    .website::before {
-        content: '\f015';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        font-size: 29px;
-        margin-right: 15px;
-    }
 
-    .website p {
-        margin-left: 52px;
-    }
-    
     /* footer  -------------------------------------*/
     #footer{
-        height:50px;
+        height:200px;
         text-align:center;
+        color: #fff;
+        background-color: #343A45;
+    }
+    #footer h2 {
+        font-family: GongGothicMedium;
+        font-size: 26px;
+        font-weight: 700;
+        padding-top: 75px;
     }
     .footer_wrap p:first-child{
         position:fixed;
         right: 20px;
         bottom:30px;
+        color: #d9d9d9;
     }
-
     .footer_wrap p:last-child {
-        height: 50px;
-        line-height: 50px;
-        font-size: 17px;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
     }
 }
 
@@ -1678,6 +1700,7 @@ section{ clear:both; width:100%; }
         position: fixed;
         left: 95%;
         bottom: 30px;
+        color: #d9d9d9;
     }
     .footer_wrap p:last-child {
         font-family: Pretendard;

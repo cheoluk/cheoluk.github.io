@@ -91,7 +91,8 @@ function MobAddTyping() {
 
 
 
-$(document).ready(function() {   
+$(document).ready(function() {
+
     var check = 0;
     //AddTyping();
     $(window).scroll(function() //
@@ -114,44 +115,131 @@ $(document).ready(function() {
 
     });  /* end */
     
+    // pc일때
+    var bw = $(window).width();   //(b)rowser (w)idth : 브라우저 너비값 기록변수
+    if(bw>=1200) {
+        const headerHeight = 120;
 
-    
-    const headerHeight = 120;
+        // 각 섹션의 offset top 값을 미리 계산
+        const introOffset = 0;
+        const profileOffset = 891;
+        const skillsOffset = profileOffset + 820;
+        const portfolioOffset = skillsOffset + 735;
+        const contactOffset = portfolioOffset + 925;
 
-    // 각 섹션의 offset top 값을 미리 계산
-    const introOffset = 0;
-    const profileOffset = 891;
-    const skillsOffset = profileOffset + 820;
-    const portfolioOffset = skillsOffset + 735;
-    const contactOffset = portfolioOffset + 925;
+        $(".gnb li button").click(function () {
+            const index = $(this).parent().index();
+            let targetOffset = 0;
 
-    $(".gnb li button").click(function () {
-        const index = $(this).parent().index();
-        let targetOffset = 0;
+            switch (index) {
+                case 0:
+                    targetOffset = introOffset;
+                    break;
+                case 1:
+                    targetOffset = profileOffset;
+                    break;
+                case 2:
+                    targetOffset = skillsOffset;
+                    break;
+                case 3:
+                    targetOffset = portfolioOffset;
+                    break;
+                case 4:
+                    targetOffset = contactOffset;
+                    break;
+            }
 
-        switch (index) {
-            case 0:
-                targetOffset = introOffset;
-                break;
-            case 1:
-                targetOffset = profileOffset;
-                break;
-            case 2:
-                targetOffset = skillsOffset;
-                break;
-            case 3:
-                targetOffset = portfolioOffset;
-                break;
-            case 4:
-                targetOffset = contactOffset;
-                break;
-        }
+            $("html, body").animate({
+                scrollTop: targetOffset - headerHeight
+            }, 300); // 0.5초 애니메이션
+        });
+    }
 
-        $("html, body").animate({
-            scrollTop: targetOffset - headerHeight
-        }, 300); // 0.5초 애니메이션
-    });
+    //태블릿 해상도 일때
+    if(bw>500 && bw<1200) {
+        // const headerHeight = 125;    - 헤더 높이
 
+        // 각 섹션의 offset top 값을 미리 계산
+        const introOffset = 0;
+        const profileOffset = 855;
+        const skillsOffset = profileOffset + 1408;
+        const portfolioOffset = skillsOffset + 1193;
+        const contactOffset = portfolioOffset + 1100;
+
+        $(".gnb li button").click(function () {
+            const index = $(this).parent().index();
+            let targetOffset = 0;
+
+            switch (index) {
+                case 0:
+                    targetOffset = introOffset;
+                    break;
+                case 1:
+                    targetOffset = profileOffset;
+                    break;
+                case 2:
+                    targetOffset = skillsOffset;
+                    break;
+                case 3:
+                    targetOffset = portfolioOffset;
+                    break;
+                case 4:
+                    targetOffset = contactOffset;
+                    break;
+            }
+
+            $("nav").stop().css({marginLeft:"-100%"});
+
+            $("html, body").animate({
+                scrollTop: targetOffset
+            }, 300); // 0.5초 애니메이션
+ 
+         
+        });
+    }
+
+    //모바일 해상도 일때
+    if(bw<=500) {
+        // const headerHeight = 125;    - 헤더 높이
+
+        // 각 섹션의 offset top 값을 미리 계산
+        const introOffset = 0;
+        const profileOffset = 855;
+        const skillsOffset = profileOffset + 1356;
+        const portfolioOffset = skillsOffset + 1193;
+        const contactOffset = portfolioOffset + 1100;
+
+        $(".gnb li button").click(function () {
+            const index = $(this).parent().index();
+            let targetOffset = 0;
+
+            switch (index) {
+                case 0:
+                    targetOffset = introOffset;
+                    break;
+                case 1:
+                    targetOffset = profileOffset;
+                    break;
+                case 2:
+                    targetOffset = skillsOffset;
+                    break;
+                case 3:
+                    targetOffset = portfolioOffset;
+                    break;
+                case 4:
+                    targetOffset = contactOffset;
+                    break;
+            }
+
+            $("nav").stop().css({marginLeft:"-100%"});
+
+            $("html, body").animate({
+                scrollTop: targetOffset
+            }, 300); // 0.5초 애니메이션
+ 
+         
+        });
+    }
 
 
     // 전역메뉴 좌우 슬라이드 조작&애니메이션
@@ -226,32 +314,7 @@ $(document).ready(function() {
       } 
     }); */
     
-    // 인트로 좌우 슬라이드 조작[바형식의 네비게이션 버튼]&애니메이션
-    /* $(".intro_btn button:last").hide(); 
-    $(".intro_btn").css({marginLeft:"-60px"});
-    $(".intro_btn button:eq(0)").css({background:"url(images/intro_btn_now.png)no-repeat center top"});
-    $(".intro_btn button:eq(1)").css({background:"url(images/intro_btn.png)no-repeat center top"});
-    $(".intro_btn button:eq(2)").css({background:"url(images/intro_btn.png)no-repeat center top"}); */
-     
-    // 1,2,3 인트로 버튼
-    /* $(".intro_btn button:not(:last)").click(function(){
-      clearInterval(ag);
-      $(".intro_btn button:last").fadeIn("fast");
-      $(".intro_btn").stop().animate({marginLeft:"-85px"});
-      
-      count = $(this).index();
-      $(".intro ul").stop().animate({marginLeft: -100 * count +"%" });
-      
-      $(".intro_btn button:not(:last)").css({background:"url(images/intro_btn.png)no-repeat center top"});
-      $(".intro_btn button:eq("+count+")").css({background:"url(images/intro_btn_now.png)no-repeat center top"});
-    }); */
-
-    //play 인트로 버튼
-    /* $(".intro_btn button:last").click(function(){
-      ag = setInterval("autoGallery()",3000);
-      $(".intro_btn").stop().animate({marginLeft:"-60px"});
-      $(this).fadeOut("fast");
-    }); */
+    
      
     // profile 
     /* $(".profile_wrap dd:not(:first)").hide(); 
@@ -265,18 +328,17 @@ $(document).ready(function() {
     /* $(".job_chart li p").css({ width:0 }); */
       
     //6. portfolio 
-    /* $(".port_btn button:eq(0)").css({color:"#2F71FA"}); 
+    $(".port_btn button:eq(0)").css({color:"#2F71FA"}); 
     $(".port_wrap>ul>li:not(:first)").hide();    
-    $(".port_btn button").click(function(){ 
-      //$(".port_btn button").css({color:"#CCCCCC"});
+    $(".port_btn button").click(function(){
       $(".port_btn button").removeAttr('style');
       $(this).css({color:"#2F71FA"});
       $(".port_wrap>ul>li").hide();
       $(".port_wrap>ul>li:eq("+$(this).index()+")").show();
-    }); */
+    });
 
     // 포트폴리오 버튼
-    $(".port_btn button:eq(0)").addClass("btn_on").css({color:"#2F71FA"}); // 첫 버튼 활성화
+    /* $(".port_btn button:eq(0)").addClass("btn_on").css({color:"#2F71FA"}); // 첫 버튼 활성화
     $(".port_btn button").not(".btn_on").css({color:"#CCCCCC"}); // 나머지 회색 처리
     $(".port_wrap>ul>li:not(:first)").hide(); 
     $(".port_btn button").click(function(){ 
@@ -284,7 +346,7 @@ $(document).ready(function() {
         $(this).addClass("btn_on").css({color:"#2F71FA"}); // 클릭된 버튼만 활성화 + 기본 색
         $(".port_wrap>ul>li").hide();
         $(".port_wrap>ul>li:eq("+$(this).index()+")").show();
-    });
+    }); */
      
     /* $(".more_btn1").click(function(){
       $(".check_li_img1").show();
